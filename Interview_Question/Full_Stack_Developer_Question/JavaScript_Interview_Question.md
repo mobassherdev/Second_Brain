@@ -385,8 +385,7 @@
 
 ---
 
-## Question:
-What is JavaScript?
+## Question: What is JavaScript?
 
 ## Answer:
 JavaScript is a high-level, interpreted programming language that runs in the browser and on the server (via Node.js). It's the language of the web — every interactive website you use is powered by JavaScript. Unlike HTML and CSS which handle structure and styling, JavaScript handles behavior and logic.
@@ -404,8 +403,7 @@ Mention that JavaScript is not the same as Java (a common beginner mistake). Hig
 
 ---
 
-## Question:
-What are the data types in JavaScript?
+## Question: What are the data types in JavaScript?
 
 ## Answer:
 JavaScript has eight data types. There are seven primitive types: `String`, `Number`, `Boolean`, `Null`, `Undefined`, `Symbol`, and `BigInt`. Then there's one non-primitive type: `Object`.
@@ -425,8 +423,7 @@ Don't just list the types — explain the difference between primitives and obje
 
 ---
 
-## Question:
-What is the difference between primitive and reference data types?
+## Question: What is the difference between primitive and reference data types?
 
 ## Answer:
 Primitive types store their actual value directly. When you assign one primitive to another, JavaScript copies the value. Reference types store a reference (memory address) to the actual data. When you assign a reference type to another variable, both variables point to the same object.
@@ -444,8 +441,7 @@ Give a quick code example showing the reference behavior. Mention that this is w
 
 ---
 
-## Question:
-What is the difference between `null` and `undefined`?
+## Question: What is the difference between `null` and `undefined`?
 
 ## Answer:
 `undefined` means a variable has been declared but hasn't been assigned a value yet. JavaScript sets this automatically. `null` is an intentional assignment — it means "this value is empty."
@@ -463,8 +459,7 @@ Explain when you'd use each in practice. The `==` vs `===` comparison is a good 
 
 ---
 
-## Question:
-What is `NaN`?
+## Question: What is `NaN`?
 
 ## Answer:
 `NaN` stands for "Not a Number." It's the result when a mathematical operation fails to produce a meaningful number. For example, dividing a string by a number, or calling `Number("hello")` gives `NaN`.
@@ -484,8 +479,7 @@ Mention the quirk that `typeof NaN` is `"number"` — interviewers love this. Ex
 
 ---
 
-## Question:
-How do you check if a value is `NaN`?
+## Question: How do you check if a value is `NaN`?
 
 ## Answer:
 The best way is `Number.isNaN(value)`. This is the modern, reliable method. It returns `true` only if the value is actually `NaN`.
@@ -503,8 +497,7 @@ Always recommend `Number.isNaN()` over the global `isNaN()`. If you mention `Obj
 
 ---
 
-## Question:
-What is the difference between `==` and `===`?
+## Question: What is the difference between `==` and `===`?
 
 ## Answer:
 `==` is the loose equality operator. It compares values after converting them to the same type (type coercion). `===` is the strict equality operator — it compares both value and type without conversion.
@@ -522,8 +515,7 @@ Give a few examples of surprising `==` behavior. State clearly that you use `===
 
 ---
 
-## Question:
-What is type coercion?
+## Question: What is type coercion?
 
 ## Answer:
 Type coercion is JavaScript automatically converting a value from one type to another. It happens with loose operators like `==`, `+`, `-`, and when using functions like `Boolean()`, `Number()`, or `String()`.
@@ -541,8 +533,7 @@ Mention specific examples like `"5" + 3` vs `"5" - 3`. Explain that understandin
 
 ---
 
-## Question:
-What are truthy and falsy values?
+## Question: What are truthy and falsy values?
 
 ## Answer:
 In JavaScript, every value is either truthy or falsy when used in a boolean context (like an `if` statement). Falsy values are values that evaluate to `false`. Everything else is truthy.
@@ -562,8 +553,7 @@ Know the exact list of falsy values. A common mistake is thinking empty arrays o
 
 ---
 
-## Question:
-What are template literals?
+## Question: What are template literals?
 
 ## Answer:
 Template literals are strings wrapped in backticks (`` ` ``) instead of quotes. They let you embed expressions using `${expression}` and create multi-line strings without `\n`.
@@ -581,8 +571,7 @@ Show a before/after comparison: concatenation vs template literals. Mention tagg
 
 ---
 
-## Question:
-What are default parameters?
+## Question: What are default parameters?
 
 ## Answer:
 Default parameters let you set fallback values for function parameters when no value or `undefined` is passed. Before ES6, we had to do this manually inside the function body.
@@ -600,8 +589,7 @@ Mention that defaults are applied when the value is `undefined`, not when it's `
 
 ---
 
-## Question:
-What are rest parameters?
+## Question: What are rest parameters?
 
 ## Answer:
 Rest parameters let a function accept an indefinite number of arguments as an array. They use the `...` syntax and must be the last parameter in the function signature.
@@ -619,8 +607,7 @@ Compare rest parameters with the `arguments` object. Explain that rest parameter
 
 ---
 
-## Question:
-What is the spread operator?
+## Question: What is the spread operator?
 
 ## Answer:
 The spread operator (`...`) expands an iterable (like an array or object) into individual elements. It's the opposite of rest parameters — rest collects, spread expands.
@@ -638,8 +625,7 @@ Show practical examples like copying arrays and merging objects. Mention that sp
 
 ---
 
-## Question:
-What are destructuring assignments?
+## Question: What are destructuring assignments?
 
 ## Answer:
 Destructuring lets you extract values from arrays or properties from objects into distinct variables. It makes code much cleaner than accessing values one by one.
@@ -657,8 +643,7 @@ Show both object and array destructuring. Mention renaming and default values �
 
 ---
 
-## Question:
-What is optional chaining (`?.`)?
+## Question: What is optional chaining (`?.`)?
 
 ## Answer:
 Optional chaining (`?.`) lets you safely access deeply nested properties without checking if each level exists. If any part of the chain is `null` or `undefined`, it short-circuits and returns `undefined` instead of throwing an error.
@@ -676,8 +661,7 @@ Give a real example like accessing API response data that might be missing. Comp
 
 ---
 
-## Question:
-What is nullish coalescing (`??`)?
+## Question: What is nullish coalescing (`??`)?
 
 ## Answer:
 The nullish coalescing operator (`??`) returns the right-hand operand when the left-hand operand is `null` or `undefined`. It's similar to the `||` operator, but `||` treats falsy values like `0` and `""` as empty.
@@ -695,8 +679,7 @@ Explain the key difference from `||`. The `0` example is the best way to show wh
 
 ---
 
-## Question:
-What are symbols?
+## Question: What are symbols?
 
 ## Answer:
 Symbols are unique, immutable primitives introduced in ES6. Every symbol is unique — even two symbols created with the same description are different. They're mainly used as unique property keys for objects.
@@ -714,8 +697,7 @@ Explain why uniqueness matters — it prevents property collisions. Mention Symb
 
 ---
 
-## Question:
-What is BigInt?
+## Question: What is BigInt?
 
 ## Answer:
 BigInt is a numeric type introduced in ES2020 that can represent integers larger than `Number.MAX_SAFE_INTEGER` (2^53 - 1). Regular numbers lose precision beyond that point.
@@ -733,8 +715,7 @@ Give an example where regular numbers fail (like `9007199254740992 + 1` gives th
 
 ---
 
-## Question:
-What is strict mode (`"use strict"`)?
+## Question: What is strict mode (`"use strict"`)?
 
 ## Answer:
 Strict mode is a restricted variant of JavaScript that catches common coding mistakes and prevents unsafe actions. You enable it by adding `"use strict"` at the top of a script or function.
@@ -752,8 +733,7 @@ Mention that modern code (ES6 modules, classes) is automatically strict. Give ex
 
 ---
 
-## Question:
-What is the `typeof` operator?
+## Question: What is the `typeof` operator?
 
 ## Answer:
 The `typeof` operator returns a string indicating the type of the operand. It's useful for checking variable types at runtime, especially when dealing with user input or API responses.
@@ -772,8 +752,7 @@ Mention the `typeof null` quirk — it returns `"object"` due to a legacy bug in
 
 ---
 
-## Question:
-What is the `instanceof` operator?
+## Question: What is the `instanceof` operator?
 
 ## Answer:
 The `instanceof` operator checks if an object is an instance of a particular class or constructor function by walking up the prototype chain. It's useful for type checking objects.
@@ -791,8 +770,7 @@ Mention the cross-frame limitation. Recommend `Array.isArray()` for array checki
 
 ---
 
-## Question:
-What is the `in` operator?
+## Question: What is the `in` operator?
 
 ## Answer:
 The `in` operator checks if a property exists in an object (including inherited properties). It returns `true` if the property exists, `false` otherwise.
@@ -810,8 +788,7 @@ Explain the difference between `in` and `hasOwnProperty()`. Give an example wher
 
 ---
 
-## Question:
-What is the `delete` operator?
+## Question: What is the `delete` operator?
 
 ## Answer:
 The `delete` operator removes a property from an object. It returns `true` if the deletion was successful or if the property didn't exist in the first place.
@@ -829,8 +806,7 @@ Mention that `delete` is generally discouraged in modern code. Explain that immu
 
 ---
 
-## Question:
-What is the difference between `const`, `let`, and `var`?
+## Question: What is the difference between `const`, `let`, and `var`?
 
 ## Answer:
 `var` is the old way to declare variables — it's function-scoped and gets hoisted to the top of its function. `let` and `const` are ES6 additions — they're block-scoped. The difference between `let` and `const` is that `const` cannot be reassigned.
@@ -848,8 +824,7 @@ Emphasize the block scoping difference. Mention the Temporal Dead Zone for `let`
 
 ---
 
-## Question:
-When should you use `const`, `let`, or `var`?
+## Question: When should you use `const`, `let`, or `var`?
 
 ## Answer:
 I use `const` by default for everything. If I need to reassign a variable, I switch to `let`. I never use `var` — there's no reason to in modern JavaScript.
@@ -871,8 +846,7 @@ This is a best practices question. Show that you have a clear convention. Mentio
 
 ---
 
-## Question:
-What is scope?
+## Question: What is scope?
 
 ## Answer:
 Scope determines where variables are accessible in your code. Think of it as the "visibility" of a variable — where can you access it from? JavaScript has three types of scope: global, function, and block scope.
@@ -890,8 +864,7 @@ Explain that scope is about visibility, not just where code runs. Mention that u
 
 ---
 
-## Question:
-What is global scope?
+## Question: What is global scope?
 
 ## Answer:
 Global scope is the outermost scope in JavaScript. Variables declared outside any function or block are in the global scope and can be accessed from anywhere in the code.
@@ -909,8 +882,7 @@ Mention that global variables are a common source of bugs in larger applications
 
 ---
 
-## Question:
-What is function scope?
+## Question: What is function scope?
 
 ## Answer:
 Function scope means variables declared inside a function are only accessible within that function. They're created when the function runs and destroyed when it returns.
@@ -928,8 +900,7 @@ Explain the difference between function scope (`var`) and block scope (`let`/`co
 
 ---
 
-## Question:
-What is block scope?
+## Question: What is block scope?
 
 ## Answer:
 Block scope means variables declared with `let` or `const` inside a `{}` block are only accessible within that block. This includes `if` statements, `for` loops, and any other curly braces.
@@ -947,8 +918,7 @@ Give a `for` loop example where `var` leaks but `let` doesn't. This is the class
 
 ---
 
-## Question:
-What is lexical scope?
+## Question: What is lexical scope?
 
 ## Answer:
 Lexical scope (also called static scope) means that a function's scope is determined by where it's written in the code, not where it's called. Inner functions have access to variables from their outer (enclosing) functions.
@@ -966,8 +936,7 @@ Explain lexical scope by showing a nested function example. Connect it to closur
 
 ---
 
-## Question:
-What is scope chaining?
+## Question: What is scope chaining?
 
 ## Answer:
 Scope chaining is how JavaScript looks up variables. When a variable is used, JavaScript first checks the current scope. If it's not found, it goes to the parent scope, then the grandparent scope, all the way up to the global scope.
@@ -985,8 +954,7 @@ Draw a simple diagram showing nested scopes and how the chain works. Mention tha
 
 ---
 
-## Question:
-What is hoisting?
+## Question: What is hoisting?
 
 ## Answer:
 Hoisting is JavaScript's behavior of moving declarations to the top of their scope during the compilation phase. Variable and function declarations are moved up, but their assignments stay in place.
@@ -1005,8 +973,7 @@ Show code examples where hoisting causes unexpected behavior. Explain that `let`
 
 ---
 
-## Question:
-What gets hoisted in JavaScript?
+## Question: What gets hoisted in JavaScript?
 
 ## Answer:
 Variable declarations (`var`, `let`, `const`) and function declarations get hoisted. Function expressions and arrow functions assigned to variables are NOT fully hoisted — only the variable declaration part is.
@@ -1024,8 +991,7 @@ Give examples of each type. The difference between function declarations and fun
 
 ---
 
-## Question:
-Why are `let` and `const` hoisted but inaccessible?
+## Question: Why are `let` and `const` hoisted but inaccessible?
 
 ## Answer:
 `let` and `const` are hoisted so the engine knows they exist in the scope, but they're not initialized until the code reaches the declaration. This creates the Temporal Dead Zone — a period where the variable exists but can't be accessed.
@@ -1043,8 +1009,7 @@ Explain that TDZ is a feature, not a bug. Compare with `var`'s `undefined` initi
 
 ---
 
-## Question:
-What is the Temporal Dead Zone (TDZ)?
+## Question: What is the Temporal Dead Zone (TDZ)?
 
 ## Answer:
 The TDZ is the period between when a `let` or `const` variable is hoisted and when it's actually declared in the code. During this time, the variable exists but can't be read or written — accessing it throws a `ReferenceError`.
@@ -1062,8 +1027,7 @@ Show a code example that triggers TDZ. Explain why this is better than `var`'s `
 
 ---
 
-## Question:
-What is an execution context?
+## Question: What is an execution context?
 
 ## Answer:
 An execution context is the environment where JavaScript code is evaluated and executed. It contains the code's variable environment, lexical environment, and `this` binding. Think of it as a container that holds everything needed to run a piece of code.
@@ -1081,8 +1045,7 @@ Mention the three types. Connect execution context to the call stack — each co
 
 ---
 
-## Question:
-What is the call stack?
+## Question: What is the call stack?
 
 ## Answer:
 The call stack is a data structure that keeps track of function calls. JavaScript is single-threaded, so it uses a call stack to manage execution — when a function is called, it's pushed onto the stack, and when it returns, it's popped off.
@@ -1100,8 +1063,7 @@ Draw a simple diagram showing functions being pushed and popped. Mention the sta
 
 ---
 
-## Question:
-How does JavaScript execute code?
+## Question: How does JavaScript execute code?
 
 ## Answer:
 JavaScript executes code in two phases: the creation phase and the execution phase. In the creation phase, it scans the code, hoists declarations, and sets up the execution context. In the execution phase, it runs the code line by line.
@@ -1119,8 +1081,7 @@ Mention the two phases and connect them to hoisting. If you know about V8's JIT 
 
 ---
 
-## Question:
-What is memory creation phase?
+## Question: What is memory creation phase?
 
 ## Answer:
 The memory creation phase is the first phase of execution context creation. During this phase, JavaScript scans the code and allocates memory for all variables, functions, and parameters. Variables are set to their initial values (`undefined` for `var`, uninitialized for `let`/`const`).
@@ -1138,8 +1099,7 @@ Connect this to hoisting — explain that this is when memory is allocated, whic
 
 ---
 
-## Question:
-What is execution phase?
+## Question: What is execution phase?
 
 ## Answer:
 The execution phase is when JavaScript actually runs the code line by line. It assigns values to variables, executes function bodies, and evaluates expressions. This is when the code you wrote actually happens.
@@ -1157,8 +1117,7 @@ Mention that the execution phase is when assignments happen — this explains wh
 
 ---
 
-## Question:
-What happens when a function is called?
+## Question: What happens when a function is called?
 
 ## Answer:
 When a function is called, JavaScript creates a new execution context and pushes it onto the call stack. The context includes the function's local variables, parameters, and a reference to the outer scope (lexical environment).
@@ -1177,8 +1136,7 @@ Connect this to the call stack and garbage collection. Mention that this is why 
 
 ---
 
-## Question:
-What is recursion?
+## Question: What is recursion?
 
 ## Answer:
 Recursion is when a function calls itself to solve a problem by breaking it into smaller subproblems. Every recursive function needs a base case (to stop) and a recursive case (to continue).
@@ -1196,8 +1154,7 @@ Give a simple example like factorial. Mention the base case first — interviewe
 
 ---
 
-## Question:
-What is tail recursion?
+## Question: What is tail recursion?
 
 ## Answer:
 Tail recursion is when the recursive call is the last operation in the function. This is important because some engines can optimize tail-recursive functions to avoid adding new stack frames — called tail call optimization (TCO).
@@ -1215,8 +1172,7 @@ Mention that TCO is part of the ES6 spec but not widely implemented. Show that y
 
 ---
 
-## Question:
-What is a stack overflow?
+## Question: What is a stack overflow?
 
 ## Answer:
 A stack overflow happens when the call stack exceeds its maximum size. This typically occurs with infinite recursion or very deep function calls. JavaScript throws a "Maximum call stack size exceeded" error.
@@ -1234,8 +1190,7 @@ Mention the typical stack size (around 15,000 frames). Explain how to debug it �
 
 ---
 
-## Question:
-How does JavaScript manage memory?
+## Question: How does JavaScript manage memory?
 
 ## Answer:
 JavaScript uses automatic memory management. When you create variables and objects, the engine allocates memory. When they're no longer needed, the garbage collector frees that memory.
@@ -1253,8 +1208,7 @@ Mention that you don't manually free memory in JavaScript. Explain that understa
 
 ---
 
-## Question:
-What is garbage collection?
+## Question: What is garbage collection?
 
 ## Answer:
 Garbage collection is the process where the JavaScript engine automatically frees memory that's no longer in use. It identifies objects that are unreachable (no references pointing to them) and deallocates their memory.
@@ -1272,8 +1226,7 @@ Explain that garbage collection is not real-time — it runs when the engine dec
 
 ---
 
-## Question:
-What is a memory leak?
+## Question: What is a memory leak?
 
 ## Answer:
 A memory leak happens when your code keeps references to objects that are no longer needed, preventing the garbage collector from freeing that memory. Over time, the app uses more and more memory until it slows down or crashes.
@@ -1291,8 +1244,7 @@ Give specific examples of memory leaks you've encountered. Mention Chrome DevToo
 
 ---
 
-## Question:
-How can you avoid memory leaks?
+## Question: How can you avoid memory leaks?
 
 ## Answer:
 The main ways to avoid memory leaks are: clean up event listeners when components unmount, avoid storing references to DOM elements you don't need, be careful with closures that capture large objects, and limit global variable usage.
@@ -1311,8 +1263,7 @@ Give a React example with `useEffect` cleanup. Mention that memory leaks are oft
 
 ---
 
-## Question:
-What is the global object?
+## Question: What is the global object?
 
 ## Answer:
 The global object is the top-level object that contains all global variables and functions. In browsers, it's `window`. In Node.js, it's `global`. In modern JavaScript, `globalThis` provides a universal way to access it.
@@ -1330,8 +1281,7 @@ Mention `globalThis` — it shows you're up to date with ES2020. Explain why `va
 
 ---
 
-## Question:
-What is the `this` keyword?
+## Question: What is the `this` keyword?
 
 ## Answer:
 `this` refers to the object that is currently executing the code. Its value depends on how a function is called — it's not determined by where the function is written (unlike lexical scope).
@@ -1354,8 +1304,7 @@ Explain the different `this` binding rules (default, implicit, explicit, `new`).
 
 ---
 
-## Question:
-What are function declarations?
+## Question: What are function declarations?
 
 ## Answer:
 Function declarations define a named function that is fully hoisted — both the name and the body. You can call a function declaration before it appears in the code because of hoisting.
@@ -1373,8 +1322,7 @@ Show that function declarations are hoisted. Give an example where calling a fun
 
 ---
 
-## Question:
-What are function expressions?
+## Question: What are function expressions?
 
 ## Answer:
 Function expressions assign a function to a variable. The function can be named or anonymous. Unlike declarations, function expressions are NOT fully hoisted — only the variable is hoisted.
@@ -1392,8 +1340,7 @@ Compare with function declarations to show the hoisting difference. Mention that
 
 ---
 
-## Question:
-What are arrow functions?
+## Question: What are arrow functions?
 
 ## Answer:
 Arrow functions are a concise syntax for writing functions introduced in ES6. They use `=>` and have some key differences from regular functions — most importantly, they don't have their own `this`.
@@ -1412,8 +1359,7 @@ Explain when to use arrow functions vs regular functions. The `this` difference 
 
 ---
 
-## Question:
-What are the differences between arrow functions and regular functions?
+## Question: What are the differences between arrow functions and regular functions?
 
 ## Answer:
 Arrow functions differ from regular functions in several ways: they don't have their own `this`, `arguments`, or `super`. They can't be used as constructors and don't have a `prototype` property.
@@ -1431,8 +1377,7 @@ Give a clear comparison table or list. Mention specific use cases where each typ
 
 ---
 
-## Question:
-How does `this` behave in arrow functions?
+## Question: How does `this` behave in arrow functions?
 
 ## Answer:
 Arrow functions don't have their own `this`. Instead, `this` is inherited from the enclosing lexical scope — the nearest non-arrow function or global scope. This is called lexical `this`.
@@ -1450,8 +1395,7 @@ Show a practical example where arrow functions solve a `this` problem. Mention t
 
 ---
 
-## Question:
-What are callback functions?
+## Question: What are callback functions?
 
 ## Answer:
 A callback function is a function passed as an argument to another function and executed later — either when an operation completes or when an event fires. Callbacks are the foundation of asynchronous JavaScript.
@@ -1469,8 +1413,7 @@ Give simple examples like `setTimeout` or `addEventListener`. Mention callback h
 
 ---
 
-## Question:
-What are higher-order functions?
+## Question: What are higher-order functions?
 
 ## Answer:
 Higher-order functions are functions that either take a function as an argument or return a function as a result. They're a key concept in functional programming.
@@ -1488,8 +1431,7 @@ Give examples of built-in higher-order functions. Show how to create a simple on
 
 ---
 
-## Question:
-What are first-class functions?
+## Question: What are first-class functions?
 
 ## Answer:
 First-class functions means functions in JavaScript are treated like any other value — they can be assigned to variables, passed as arguments, returned from other functions, and stored in data structures.
@@ -1507,8 +1449,7 @@ Show examples of each capability. Mention that first-class functions enable patt
 
 ---
 
-## Question:
-What are pure functions?
+## Question: What are pure functions?
 
 ## Answer:
 Pure functions always return the same output for the same input and have no side effects. They don't modify external state, don't perform I/O, and don't depend on anything outside their parameters.
@@ -1526,8 +1467,7 @@ Give a concrete example of a pure vs impure function. Mention that React and Red
 
 ---
 
-## Question:
-What are impure functions?
+## Question: What are impure functions?
 
 ## Answer:
 Impure functions have side effects or depend on external state. They might modify a global variable, write to a file, make an API call, or return different results for the same input.
@@ -1545,8 +1485,7 @@ Don't say impure functions are bad — they're necessary. Explain that the goal 
 
 ---
 
-## Question:
-What are Immediately Invoked Function Expressions (IIFE)?
+## Question: What are Immediately Invoked Function Expressions (IIFE)?
 
 ## Answer:
 An IIFE is a function that runs immediately after it's defined. You create it by wrapping a function expression in parentheses and calling it right away: `(function() { ... })()`.
@@ -1564,8 +1503,7 @@ Show the syntax and explain why the parentheses are needed. Mention that modules
 
 ---
 
-## Question:
-What are closures?
+## Question: What are closures?
 
 ## Answer:
 A closure is when a function remembers and can access variables from its outer scope, even after the outer function has returned. The inner function "closes over" the variables it needs.
@@ -1583,8 +1521,7 @@ Give a clear example — a counter function using a closure is the classic one. 
 
 ---
 
-## Question:
-What are practical uses of closures?
+## Question: What are practical uses of closures?
 
 ## Answer:
 Closures are used for data privacy (creating private variables), function factories (generating specialized functions), memoization (caching results), event handlers (preserving context), and module patterns.
@@ -1603,8 +1540,7 @@ Give 2-3 specific examples from real projects. The private variable pattern and 
 
 ---
 
-## Question:
-What are currying functions?
+## Question: What are currying functions?
 
 ## Answer:
 Currying transforms a function that takes multiple arguments into a sequence of functions that each take one argument. Instead of `f(a, b, c)`, you get `f(a)(b)(c)`.
@@ -1622,8 +1558,7 @@ Show a currying implementation. Give a practical example like partial applicatio
 
 ---
 
-## Question:
-What is function composition?
+## Question: What is function composition?
 
 ## Answer:
 Function composition combines two or more functions to create a new function. The output of one function becomes the input of the next. It's a core concept in functional programming.
@@ -1641,8 +1576,7 @@ Give a simple compose implementation. Show how it makes code more readable by br
 
 ---
 
-## Question:
-What is the `arguments` object?
+## Question: What is the `arguments` object?
 
 ## Answer:
 The `arguments` object is an array-like object available inside regular functions that contains all the arguments passed to the function. It's not available in arrow functions.
@@ -1661,8 +1595,7 @@ Show the difference between `arguments` and rest parameters. Mention that rest p
 
 ---
 
-## Question:
-What is the difference between `arguments` and rest parameters?
+## Question: What is the difference between `arguments` and rest parameters?
 
 ## Answer:
 `arguments` is an array-like object available in regular functions. Rest parameters (`...args`) are a real array available in any function. Rest parameters are the modern replacement and are always preferred.
@@ -1680,8 +1613,7 @@ Show a side-by-side comparison. Emphasize that rest parameters are the modern, p
 
 ---
 
-## Question:
-What is `bind()`?
+## Question: What is `bind()`?
 
 ## Answer:
 `bind()` creates a new function with `this` permanently set to a specific value. It doesn't call the function immediately — it returns a new function with the bound `this`.
@@ -1699,8 +1631,7 @@ Give an example where `this` is lost in a callback and `bind()` fixes it. Mentio
 
 ---
 
-## Question:
-What is `call()`?
+## Question: What is `call()`?
 
 ## Answer:
 `call()` invokes a function immediately with a specified `this` value and arguments passed individually. It's used when you want to call a function with a specific context.
@@ -1718,8 +1649,7 @@ Show an example of borrowing an array method. Mention that `call()` is useful wh
 
 ---
 
-## Question:
-What is `apply()`?
+## Question: What is `apply()`?
 
 ## Answer:
 `apply()` is like `call()`, but it takes arguments as an array instead of individually. It also invokes the function immediately with a specified `this` value.
@@ -1737,8 +1667,7 @@ Compare `call()` and `apply()` — the only difference is how arguments are pass
 
 ---
 
-## Question:
-What are anonymous functions?
+## Question: What are anonymous functions?
 
 ## Answer:
 Anonymous functions are functions without a name. They're usually assigned to a variable or passed as arguments. Arrow functions are commonly anonymous.
@@ -1756,8 +1685,7 @@ Give examples like `setTimeout(function() { ... }, 1000)`. Mention that named fu
 
 ---
 
-## Question:
-What are named function expressions?
+## Question: What are named function expressions?
 
 ## Answer:
 Named function expressions are function expressions with a name. The name is only accessible inside the function itself, which is useful for recursion and debugging.
@@ -1775,8 +1703,7 @@ Show the syntax difference from anonymous function expressions. Mention that the
 
 ---
 
-## Question:
-What are generator functions?
+## Question: What are generator functions?
 
 ## Answer:
 Generator functions are created with `function*` and can pause and resume execution using `yield`. They return an iterator object that you call `.next()` on to get the next value.
@@ -1794,8 +1721,7 @@ Show a simple generator example. Mention practical use cases like lazy loading d
 
 ---
 
-## Question:
-What are async functions?
+## Question: What are async functions?
 
 ## Answer:
 Async functions (declared with `async`) always return a Promise and allow you to use `await` inside them. `await` pauses execution until a Promise resolves, making async code look synchronous.
@@ -1814,8 +1740,7 @@ Show a before/after comparison with promise chains. Mention error handling with 
 
 ---
 
-## Question:
-What are async generators?
+## Question: What are async generators?
 
 ## Answer:
 Async generators combine async functions and generators. They're created with `async function*` and use `yield` to return values asynchronously. They return an async iterator that you consume with `for await...of`.
@@ -1837,8 +1762,7 @@ Mention that async generators are useful for handling data streams. Give an exam
 
 ---
 
-## Question:
-What is an object in JavaScript?
+## Question: What is an object in JavaScript?
 
 ## Answer:
 An object is a collection of key-value pairs where keys are strings (or Symbols) and values can be any data type. Objects are the fundamental building blocks of JavaScript — arrays, functions, and even primitives (when wrapped) are objects.
@@ -1857,8 +1781,7 @@ Mention that objects are reference types. Show the difference between accessing 
 
 ---
 
-## Question:
-How do objects store data?
+## Question: How do objects store data?
 
 ## Answer:
 Objects store data as key-value pairs where keys are always strings (or Symbols) and values can be any type. When you access a property, JavaScript converts the key to a string and looks it up.
@@ -1877,8 +1800,7 @@ Explain the difference between dot and bracket notation. Mention that bracket no
 
 ---
 
-## Question:
-What is the prototype?
+## Question: What is the prototype?
 
 ## Answer:
 Every JavaScript object has a hidden `[[Prototype]]` property that links to another object called its prototype. When you access a property that doesn't exist on an object, JavaScript looks up the prototype chain until it finds it or reaches `null`.
@@ -1897,8 +1819,7 @@ Explain the prototype chain concept clearly. Mention that `__proto__` is depreca
 
 ---
 
-## Question:
-What is the prototype chain?
+## Question: What is the prototype chain?
 
 ## Answer:
 The prototype chain is the sequence of objects JavaScript walks through when looking up a property. It starts from the object itself, goes to its prototype, then the prototype's prototype, and so on until it reaches `null`.
@@ -1917,8 +1838,7 @@ Draw a simple chain diagram. Explain that this is how arrays have methods like `
 
 ---
 
-## Question:
-How does inheritance work in JavaScript?
+## Question: How does inheritance work in JavaScript?
 
 ## Answer:
 JavaScript uses prototype-based inheritance. An object can inherit properties and methods from another object through the prototype chain. ES6 classes provide syntactic sugar over this prototype mechanism.
@@ -1937,8 +1857,7 @@ Mention that JavaScript inheritance is prototype-based, not class-based. Explain
 
 ---
 
-## Question:
-What is `Object.create()`?
+## Question: What is `Object.create()`?
 
 ## Answer:
 `Object.create()` creates a new object with a specified prototype. It's the modern way to set up prototype-based inheritance without using constructor functions.
@@ -1956,8 +1875,7 @@ Mention `Object.create(null)` for creating prototype-free objects — useful for
 
 ---
 
-## Question:
-What is `Object.assign()`?
+## Question: What is `Object.assign()`?
 
 ## Answer:
 `Object.assign()` copies properties from one or more source objects to a target object. It returns the target object. It's commonly used for shallow copying and merging objects.
@@ -1976,8 +1894,7 @@ Compare with spread operator — both do shallow copies. Mention that `Object.as
 
 ---
 
-## Question:
-What is object freezing?
+## Question: What is object freezing?
 
 ## Answer:
 `Object.freeze()` makes an object immutable — you can't add, remove, or modify properties. It's a shallow freeze, meaning nested objects are still mutable.
@@ -1996,8 +1913,7 @@ Emphasize that it's a shallow freeze. Give an example where nested objects can s
 
 ---
 
-## Question:
-What is object sealing?
+## Question: What is object sealing?
 
 ## Answer:
 `Object.seal()` prevents adding new properties and prevents deletion of existing properties, but allows modification of existing property values. It's less strict than `Object.freeze()`.
@@ -2016,8 +1932,7 @@ Compare with `Object.freeze()` — sealing allows value changes, freezing doesn'
 
 ---
 
-## Question:
-What is object destructuring?
+## Question: What is object destructuring?
 
 ## Answer:
 Object destructuring extracts properties from objects into distinct variables. It makes code cleaner and more readable than accessing properties one by one.
@@ -2036,8 +1951,7 @@ Show multiple examples — renaming, defaults, nested destructuring. Give a Reac
 
 ---
 
-## Question:
-What are property descriptors?
+## Question: What are property descriptors?
 
 ## Answer:
 Property descriptors define the behavior of object properties. They control whether a property is writable, enumerable, and configurable. You can get them with `Object.getOwnPropertyDescriptor()`.
@@ -2057,8 +1971,7 @@ Explain what each descriptor means. Give an example of making a property read-on
 
 ---
 
-## Question:
-What are getters and setters?
+## Question: What are getters and setters?
 
 ## Answer:
 Getters and setters are special object methods that let you define custom behavior when reading or writing a property. Getters run when you access a property, setters run when you assign to it.
@@ -2077,8 +1990,7 @@ Give a practical example like a computed property. Show how getters/setters can 
 
 ---
 
-## Question:
-What is `hasOwnProperty()`?
+## Question: What is `hasOwnProperty()`?
 
 ## Answer:
 `hasOwnProperty()` checks if an object has a property directly on itself (not inherited). It returns `true` if the property is an own property, `false` otherwise.
@@ -2096,8 +2008,7 @@ Mention `Object.hasOwn()` as the modern replacement. Show the difference between
 
 ---
 
-## Question:
-What is `Object.keys()`?
+## Question: What is `Object.keys()`?
 
 ## Answer:
 `Object.keys()` returns an array of an object's own enumerable string-keyed property names. It doesn't include inherited properties or non-enumerable properties.
@@ -2115,8 +2026,7 @@ Mention that it only returns own, enumerable, string-keyed properties. Compare w
 
 ---
 
-## Question:
-What is `Object.values()`?
+## Question: What is `Object.values()`?
 
 ## Answer:
 `Object.values()` returns an array of an object's own enumerable string-keyed property values. It's the companion to `Object.keys()`.
@@ -2134,8 +2044,7 @@ Give a practical example like extracting all user roles from a roles object. Men
 
 ---
 
-## Question:
-What is `Object.entries()`?
+## Question: What is `Object.entries()`?
 
 ## Answer:
 `Object.entries()` returns an array of an object's own enumerable string-keyed property `[key, value]` pairs. It's useful when you need both keys and values during iteration.
@@ -2153,8 +2062,7 @@ Show how to iterate over an object with `for...of` using `Object.entries()`. Men
 
 ---
 
-## Question:
-What is shallow copy?
+## Question: What is shallow copy?
 
 ## Answer:
 A shallow copy creates a new object but only copies the top-level properties. Nested objects and arrays are still referenced — both the original and the copy point to the same nested data.
@@ -2172,8 +2080,7 @@ Show a code example where shallow copy fails with nested objects. Explain that t
 
 ---
 
-## Question:
-What is deep copy?
+## Question: What is deep copy?
 
 ## Answer:
 A deep copy creates a completely independent copy of an object, including all nested objects and arrays. Changes to the copy don't affect the original at all.
@@ -2192,8 +2099,7 @@ Recommend `structuredClone()` as the modern solution. Mention the limitations of
 
 ---
 
-## Question:
-How do you deep clone an object?
+## Question: How do you deep clone an object?
 
 ## Answer:
 The modern way is `structuredClone()` — it handles most data types including dates, regex, Maps, Sets, and circular references. The older approach is `JSON.parse(JSON.stringify())`, which doesn't handle functions, undefined, or circular references.
@@ -2211,8 +2117,7 @@ Always recommend `structuredClone()` first. Mention the JSON approach's limitati
 
 ---
 
-## Question:
-What is the difference between shallow copy and deep copy?
+## Question: What is the difference between shallow copy and deep copy?
 
 ## Answer:
 A shallow copy copies only the top-level properties — nested objects are still shared references. A deep copy copies everything, including nested objects, so the original and copy are completely independent.
@@ -2231,8 +2136,7 @@ Give a clear example showing the difference. Explain when each is appropriate. M
 
 ---
 
-## Question:
-What is JSON serialization?
+## Question: What is JSON serialization?
 
 ## Answer:
 JSON serialization converts a JavaScript object into a JSON string. `JSON.stringify()` does this. `JSON.parse()` converts a JSON string back to a JavaScript object.
@@ -2250,8 +2154,7 @@ Mention the limitations — functions and undefined values are lost. Show how to
 
 ---
 
-## Question:
-What are Maps?
+## Question: What are Maps?
 
 ## Answer:
 Maps are collections of key-value pairs where keys can be any type — objects, functions, primitives. Unlike plain objects, Maps maintain insertion order and have a `size` property.
@@ -2270,8 +2173,7 @@ Compare with plain objects — Maps are better for non-string keys and frequent 
 
 ---
 
-## Question:
-What are WeakMaps?
+## Question: What are WeakMaps?
 
 ## Answer:
 WeakMaps are Maps where keys must be objects (not primitives) and keys are held weakly — if there are no other references to the key object, it can be garbage collected. This prevents memory leaks.
@@ -2290,8 +2192,7 @@ Explain why WeakMaps exist — memory management. Give an example like storing p
 
 ---
 
-## Question:
-What are Sets?
+## Question: What are Sets?
 
 ## Answer:
 Sets are collections of unique values. Each value can only appear once. They maintain insertion order and have a `size` property.
@@ -2310,8 +2211,7 @@ Show how to remove duplicates from an array with Set. Mention that Set uses `===
 
 ---
 
-## Question:
-What are WeakSets?
+## Question: What are WeakSets?
 
 ## Answer:
 WeakSets are Sets where values must be objects and are held weakly. Like WeakMaps, if there are no other references to an object, it can be garbage collected.
@@ -2334,8 +2234,7 @@ Explain the memory management benefit. Give an example like tracking processed D
 
 ---
 
-## Question:
-What are array methods?
+## Question: What are array methods?
 
 ## Answer:
 Array methods are built-in functions for working with arrays. They include methods for iterating (`forEach`, `map`, `filter`), searching (`find`, `indexOf`), transforming (`reduce`, `sort`), and manipulating (`push`, `pop`, `splice`).
@@ -2354,8 +2253,7 @@ Know the difference between mutating and non-mutating methods. Give examples of 
 
 ---
 
-## Question:
-What is `map()`?
+## Question: What is `map()`?
 
 ## Answer:
 `map()` creates a new array by applying a function to each element of the original array. It doesn't mutate the original — it returns a new array with the transformed values.
@@ -2374,8 +2272,7 @@ Show a practical example like transforming API data. Mention that in React, `map
 
 ---
 
-## Question:
-What is `filter()`?
+## Question: What is `filter()`?
 
 ## Answer:
 `filter()` creates a new array with elements that pass a test (the callback returns `true`). It doesn't mutate the original.
@@ -2394,8 +2291,7 @@ Show a practical example like filtering users by status. Mention that it returns
 
 ---
 
-## Question:
-What is `reduce()`?
+## Question: What is `reduce()`?
 
 ## Answer:
 `reduce()` executes a reducer function on each element, accumulating a single result. It takes an accumulator and current value, and returns the final accumulated value.
@@ -2414,8 +2310,7 @@ Give multiple examples — sum, flatten, group by. Mention that it can be hard t
 
 ---
 
-## Question:
-What is `forEach()`?
+## Question: What is `forEach()`?
 
 ## Answer:
 `forEach()` executes a function once for each array element. It's like a `for` loop but with cleaner syntax. It always returns `undefined` — you can't break out of it early.
@@ -2434,8 +2329,7 @@ Mention that you can't break out of `forEach`. For early termination, use a `for
 
 ---
 
-## Question:
-What is `find()`?
+## Question: What is `find()`?
 
 ## Answer:
 `find()` returns the first element that passes a test (callback returns `true`). If no element is found, it returns `undefined`. It doesn't mutate the original.
@@ -2454,8 +2348,7 @@ Compare with `findIndex()` which returns the index. Mention that `find()` is mor
 
 ---
 
-## Question:
-What is `findIndex()`?
+## Question: What is `findIndex()`?
 
 ## Answer:
 `findIndex()` returns the index of the first element that passes a test. If no element is found, it returns `-1`. It's like `find()` but returns the index instead of the value.
@@ -2473,8 +2366,7 @@ Compare with `find()` — use `findIndex()` when you need the index. Mention tha
 
 ---
 
-## Question:
-What is `some()`?
+## Question: What is `some()`?
 
 ## Answer:
 `some()` tests if at least one element passes a test. It returns `true` as soon as it finds a match, otherwise `false`. It short-circuits — it stops checking after the first match.
@@ -2492,8 +2384,7 @@ Compare with `every()` — `some()` needs one match, `every()` needs all. Mentio
 
 ---
 
-## Question:
-What is `every()`?
+## Question: What is `every()`?
 
 ## Answer:
 `every()` tests if all elements pass a test. It returns `true` only if every element passes, otherwise `false`. It also short-circuits — it stops at the first failure.
@@ -2511,8 +2402,7 @@ Compare with `some()` — `every()` needs all matches. Mention the short-circuit
 
 ---
 
-## Question:
-What is `includes()`?
+## Question: What is `includes()`?
 
 ## Answer:
 `includes()` checks if an array contains a specific value. It returns `true` if found, `false` otherwise. It uses strict equality (`===`) for comparison.
@@ -2531,8 +2421,7 @@ Compare with `indexOf()` — `includes()` returns a boolean, `indexOf()` returns
 
 ---
 
-## Question:
-What is `sort()`?
+## Question: What is `sort()`?
 
 ## Answer:
 `sort()` sorts the elements of an array in place and returns the sorted array. By default, it sorts alphabetically as strings. For numbers, you need to provide a comparison function.
@@ -2551,8 +2440,7 @@ Emphasize that it mutates. Give the number sorting example. Mention that modern 
 
 ---
 
-## Question:
-What is `splice()`?
+## Question: What is `splice()`?
 
 ## Answer:
 `splice()` changes the contents of an array by removing, replacing, or adding elements. It mutates the original array and returns the removed elements.
@@ -2571,8 +2459,7 @@ Give examples of removing, replacing, and adding. Mention that it mutates — pr
 
 ---
 
-## Question:
-What is `slice()`?
+## Question: What is `slice()`?
 
 ## Answer:
 `slice()` returns a shallow copy of a portion of an array without modifying the original. It takes a start index and optional end index.
@@ -2591,8 +2478,7 @@ Compare with `splice()` — `slice()` doesn't mutate. Mention that the `end` ind
 
 ---
 
-## Question:
-What is `flat()`?
+## Question: What is `flat()`?
 
 ## Answer:
 `flat()` creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The default depth is 1.
@@ -2611,8 +2497,7 @@ Give examples with different depths. Mention `flatMap()` as a combination of `ma
 
 ---
 
-## Question:
-What is `flatMap()`?
+## Question: What is `flatMap()`?
 
 ## Answer:
 `flatMap()` first maps each element using a mapping function, then flattens the result by one level. It's a combination of `map()` and `flat(1)`.
@@ -2630,8 +2515,7 @@ Give a practical example like splitting an array of sentences into individual wo
 
 ---
 
-## Question:
-What is `Array.from()`?
+## Question: What is `Array.from()`?
 
 ## Answer:
 `Array.from()` creates a new array from an array-like or iterable object. It can also take a mapping function as a second argument.
@@ -2649,8 +2533,7 @@ Show examples of converting different types to arrays. Mention that it's useful 
 
 ---
 
-## Question:
-What is `Array.of()`?
+## Question: What is `Array.of()`?
 
 ## Answer:
 `Array.of()` creates an array from its arguments. It's useful because `Array(3)` creates an empty array with length 3, while `Array.of(3)` creates `[3]`.
@@ -2668,8 +2551,7 @@ Explain the `Array()` vs `Array.of()` difference. Mention that `Array.of()` is r
 
 ---
 
-## Question:
-What is array destructuring?
+## Question: What is array destructuring?
 
 ## Answer:
 Array destructuring extracts values from arrays into distinct variables using the `[ ]` syntax. It's cleaner than accessing elements by index.
@@ -2688,8 +2570,7 @@ Show the variable swapping example — it's clean and impressive. Mention rest e
 
 ---
 
-## Question:
-How do you remove duplicates from an array?
+## Question: How do you remove duplicates from an array?
 
 ## Answer:
 The simplest way is to use `Set`: `const unique = [...new Set(arr)]`. Set only stores unique values, so converting to a Set and back to an array removes duplicates.
@@ -2707,8 +2588,7 @@ Show the Set approach first — it's the cleanest. Mention that it uses `===` co
 
 ---
 
-## Question:
-How do you flatten nested arrays?
+## Question: How do you flatten nested arrays?
 
 ## Answer:
 The modern way is `arr.flat(depth)` — it flattens up to the specified depth. For unlimited depth, use `flat(Infinity)`.
@@ -2730,8 +2610,7 @@ Show the `flat()` approach first. Give a recursive `reduce()` example for custom
 
 ---
 
-## Question:
-What is synchronous programming?
+## Question: What is synchronous programming?
 
 ## Answer:
 Synchronous programming means code runs line by line, in order. Each line must finish before the next one starts. If a line takes a long time (like a network request), everything after it is blocked.
@@ -2749,8 +2628,7 @@ Explain the problem with synchronous I/O — it blocks the entire thread. This s
 
 ---
 
-## Question:
-What is asynchronous programming?
+## Question: What is asynchronous programming?
 
 ## Answer:
 Asynchronous programming lets you start an operation and continue running other code while it completes. The operation runs in the background and notifies your code when it's done via callbacks, promises, or async/await.
@@ -2769,8 +2647,7 @@ Give real examples like API calls and file reads. Explain that async is necessar
 
 ---
 
-## Question:
-What is the event loop?
+## Question: What is the event loop?
 
 ## Answer:
 The event loop is the mechanism that allows JavaScript to perform non-blocking operations despite being single-threaded. It continuously checks the call stack and task queues, moving completed callbacks to the stack for execution.
@@ -2789,8 +2666,7 @@ Draw a simple diagram showing the call stack, queues, and event loop. Explain th
 
 ---
 
-## Question:
-What are Web APIs?
+## Question: What are Web APIs?
 
 ## Answer:
 Web APIs are browser-provided functions that JavaScript can call for operations that the language itself doesn't handle — like DOM manipulation, network requests, timers, and storage.
@@ -2808,8 +2684,7 @@ Explain that Web APIs are not part of the JavaScript language itself. They're pr
 
 ---
 
-## Question:
-What is the callback queue?
+## Question: What is the callback queue?
 
 ## Answer:
 The callback queue (also called the task queue or macrotask queue) holds callbacks from async operations like `setTimeout`, `setInterval`, and I/O operations. The event loop moves these callbacks to the call stack when it's empty.
@@ -2828,8 +2703,7 @@ Explain the difference between the callback queue (macrotasks) and the microtask
 
 ---
 
-## Question:
-What is the microtask queue?
+## Question: What is the microtask queue?
 
 ## Answer:
 The microtask queue holds callbacks from microtasks like `Promise.then`, `MutationObserver`, and `queueMicrotask()`. Microtasks have higher priority than macrotasks — they're processed before the callback queue.
@@ -2848,8 +2722,7 @@ Explain that microtasks always run before macrotasks. Give an example showing Pr
 
 ---
 
-## Question:
-What is a Promise?
+## Question: What is a Promise?
 
 ## Answer:
 A Promise is an object representing the eventual completion or failure of an asynchronous operation. It can be in one of three states: pending, fulfilled, or rejected.
@@ -2868,8 +2741,7 @@ Explain the three states clearly. Show a simple Promise example. Mention that Pr
 
 ---
 
-## Question:
-What are the states of a Promise?
+## Question: What are the states of a Promise?
 
 ## Answer:
 A Promise has three states: pending (initial state, operation in progress), fulfilled (operation completed successfully), and rejected (operation failed). Once fulfilled or rejected, the state doesn't change.
@@ -2888,8 +2760,7 @@ Mention that the state can't change back. Give examples of when each state is us
 
 ---
 
-## Question:
-What is promise chaining?
+## Question: What is promise chaining?
 
 ## Answer:
 Promise chaining connects multiple `.then()` handlers to perform sequential async operations. Each `.then()` receives the result of the previous one and returns a new Promise.
@@ -2908,8 +2779,7 @@ Show a chaining example. Mention that async/await is usually cleaner for sequent
 
 ---
 
-## Question:
-What is `Promise.all()`?
+## Question: What is `Promise.all()`?
 
 ## Answer:
 `Promise.all()` takes an array of Promises and returns a new Promise that resolves when all input Promises resolve, or rejects if any one rejects. The resolved value is an array of results.
@@ -2928,8 +2798,7 @@ Mention the fail-fast behavior. Compare with `Promise.allSettled()` which waits 
 
 ---
 
-## Question:
-What is `Promise.allSettled()`?
+## Question: What is `Promise.allSettled()`?
 
 ## Answer:
 `Promise.allSettled()` waits for all promises to settle (either fulfill or reject) and returns an array of objects describing each result. It never rejects.
@@ -2948,8 +2817,7 @@ Compare with `Promise.all()` — `allSettled` doesn't fail fast. Give a practica
 
 ---
 
-## Question:
-What is `Promise.race()`?
+## Question: What is `Promise.race()`?
 
 ## Answer:
 `Promise.race()` takes an array of Promises and returns a new Promise that resolves or rejects with the first promise to settle. It's like a race — the fastest one wins.
@@ -2967,8 +2835,7 @@ Show a timeout example — racing a fetch against a timer. Mention that the othe
 
 ---
 
-## Question:
-What is `Promise.any()`?
+## Question: What is `Promise.any()`?
 
 ## Answer:
 `Promise.any()` resolves with the first promise that resolves. If all promises reject, it rejects with an `AggregateError`. It's like `Promise.race()` but ignores rejections.
@@ -2987,8 +2854,7 @@ Compare with `Promise.race()` — `any()` ignores rejections. Mention `Aggregate
 
 ---
 
-## Question:
-What is async/await?
+## Question: What is async/await?
 
 ## Answer:
 Async/await is syntactic sugar over Promises that makes asynchronous code look synchronous. `async` marks a function as asynchronous and ensures it returns a Promise. `await` pauses execution until a Promise resolves.
@@ -3007,8 +2873,7 @@ Show a before/after with promise chains. Mention error handling with try/catch. 
 
 ---
 
-## Question:
-How does async/await work internally?
+## Question: How does async/await work internally?
 
 ## Answer:
 Under the hood, async/await is syntactic sugar over Promises. An `async` function returns a Promise. When you `await` a Promise, the function pauses and the event loop continues running other code. When the Promise resolves, the function resumes.
@@ -3027,8 +2892,7 @@ Mention that it's syntactic sugar over Promises. Explain that `await` yields con
 
 ---
 
-## Question:
-What is callback hell?
+## Question: What is callback hell?
 
 ## Answer:
 Callback hell is when you have multiple nested callbacks, making code hard to read, debug, and maintain. It looks like a pyramid of nested `{}` and callbacks.
@@ -3047,8 +2911,7 @@ Show a code example of callback hell. Explain how Promises and async/await solve
 
 ---
 
-## Question:
-How do you avoid callback hell?
+## Question: How do you avoid callback hell?
 
 ## Answer:
 The main solutions are Promises, async/await, and modularizing code. Promises let you chain operations. Async/await makes it look synchronous. Extracting callbacks into named functions reduces nesting.
@@ -3067,8 +2930,7 @@ Show the progression: callbacks → Promises → async/await. Mention that async
 
 ---
 
-## Question:
-What is debouncing?
+## Question: What is debouncing?
 
 ## Answer:
 Debouncing delays a function call until after a specified time has passed since the last call. If the function is called again before the timer expires, the timer resets.
@@ -3087,8 +2949,7 @@ Show a debounce implementation. Give practical examples like search input and wi
 
 ---
 
-## Question:
-What is throttling?
+## Question: What is throttling?
 
 ## Answer:
 Throttling limits a function to execute at most once in a specified time period. Unlike debouncing, it fires immediately on the first call and then ignores subsequent calls until the time period passes.
@@ -3107,8 +2968,7 @@ Compare with debouncing — throttling fires at regular intervals, debouncing wa
 
 ---
 
-## Question:
-What is the difference between debouncing and throttling?
+## Question: What is the difference between debouncing and throttling?
 
 ## Answer:
 Debouncing waits for a pause in calls before executing. Throttling executes at most once per time period, regardless of how often it's called.
@@ -3131,8 +2991,7 @@ Give clear examples of when to use each. The search input (debounce) vs scroll h
 
 ---
 
-## Question:
-What is event delegation?
+## Question: What is event delegation?
 
 ## Answer:
 Event delegation attaches a single event listener to a parent element instead of individual listeners on each child. When an event occurs on a child, it bubbles up to the parent, where the listener handles it.
@@ -3151,8 +3010,7 @@ Give a practical example like handling clicks on a list of items. Mention that i
 
 ---
 
-## Question:
-What is event bubbling?
+## Question: What is event bubbling?
 
 ## Answer:
 Event bubbling is when an event starts at the target element and propagates up through its ancestors. When you click a button inside a div inside a body, the click event fires on the button first, then the div, then the body.
@@ -3171,8 +3029,7 @@ Draw a simple diagram showing bubbling. Mention `stopPropagation()` for preventi
 
 ---
 
-## Question:
-What is event capturing?
+## Question: What is event capturing?
 
 ## Answer:
 Event capturing is the opposite of bubbling — the event starts at the outermost element and propagates down to the target. It happens first, then bubbling happens on the way back up.
@@ -3191,8 +3048,7 @@ Explain the event flow: capturing → target → bubbling. Mention that capturin
 
 ---
 
-## Question:
-What is event propagation?
+## Question: What is event propagation?
 
 ## Answer:
 Event propagation is the order in which events are received by elements. It has three phases: capturing (down from root to target), at target, and bubbling (up from target to root).
@@ -3211,8 +3067,7 @@ Draw the three phases clearly. Mention that you can stop propagation in any phas
 
 ---
 
-## Question:
-What is a module in JavaScript?
+## Question: What is a module in JavaScript?
 
 ## Answer:
 A module is a self-contained piece of code that exports specific values and can be imported by other modules. Modules help organize code into separate files with clear boundaries.
@@ -3231,8 +3086,7 @@ Mention ES modules vs CommonJS. Explain that modules create private scope and en
 
 ---
 
-## Question:
-What is the difference between CommonJS and ES Modules?
+## Question: What is the difference between CommonJS and ES Modules?
 
 ## Answer:
 CommonJS (CJS) uses `require()` and `module.exports` — it's synchronous and was designed for Node.js. ES Modules (ESM) use `import` and `export` — it's asynchronous and is the standard for browsers and modern Node.js.
@@ -3251,8 +3105,7 @@ Explain the key differences: syntax, static vs dynamic, and tree shaking. Mentio
 
 ---
 
-## Question:
-What are dynamic imports?
+## Question: What are dynamic imports?
 
 ## Answer:
 Dynamic imports use `import()` as a function to load modules at runtime. Unlike static imports, they're not loaded upfront — they're loaded on demand when the function is called.
@@ -3271,8 +3124,7 @@ Show an example of lazy loading a component. Mention that dynamic imports are ke
 
 ---
 
-## Question:
-What are JavaScript design patterns?
+## Question: What are JavaScript design patterns?
 
 ## Answer:
 Design patterns are reusable solutions to common problems. Common JavaScript patterns include Singleton (single instance), Observer (event-based), Module (encapsulation), Factory (object creation), and Decorator (extending behavior).
@@ -3291,8 +3143,7 @@ Don't list all patterns — pick 2-3 you've actually used and explain when and w
 
 ---
 
-## Question:
-What are the most common JavaScript performance optimization techniques?
+## Question: What are the most common JavaScript performance optimization techniques?
 
 ## Answer:
 Key optimizations include: minimizing DOM access (cache references), using event delegation, debouncing/throttling events, lazy loading images, code splitting, using `requestAnimationFrame` for animations, and avoiding memory leaks.
@@ -3313,8 +3164,7 @@ Give specific examples from your experience. Mention profiling with Chrome DevTo
 
 ---
 
-## Question:
-What are the JavaScript concepts every senior frontend developer should know?
+## Question: What are the JavaScript concepts every senior frontend developer should know?
 
 ## Answer:
 Core concepts include: closures, prototypes, the event loop, promises/async-await, the module system, scope and hoisting, `this` binding, memory management, and error handling. Plus modern patterns like functional programming and component architecture.
@@ -3337,8 +3187,7 @@ This is a broad question — pick 3-4 concepts you're strongest in and go deep. 
 
 ---
 
-## Question:
-What new features were introduced in ES6?
+## Question: What new features were introduced in ES6?
 
 ## Answer:
 ES6 (ES2015) introduced major features: `let`/`const`, arrow functions, template literals, destructuring, default/rest/spread operators, classes, modules, Promises, `Map`/`Set`, `Symbol`, iterators/generators, and `for...of` loops.
@@ -3359,8 +3208,7 @@ Pick 3-4 features you use most and explain them. Mention that ES6 made JavaScrip
 
 ---
 
-## Question:
-What is destructuring assignment?
+## Question: What is destructuring assignment?
 
 ## Answer:
 Destructuring extracts values from arrays or objects into variables. For objects, use `{}`. For arrays, use `[]`. You can rename, set defaults, and use rest patterns.
@@ -3379,8 +3227,7 @@ Show multiple examples — renaming, defaults, nested destructuring. Give a Reac
 
 ---
 
-## Question:
-How does nested destructuring work?
+## Question: How does nested destructuring work?
 
 ## Answer:
 Nested destructuring lets you extract deeply nested values in one statement. You mirror the object structure in the destructuring pattern.
@@ -3399,8 +3246,7 @@ Show a practical example like extracting data from a nested API response. Mentio
 
 ---
 
-## Question:
-What are computed property names?
+## Question: What are computed property names?
 
 ## Answer:
 Computed property names let you use expressions as object keys using `[]` syntax. The expression inside the brackets is evaluated and used as the property name.
@@ -3418,8 +3264,7 @@ Show an example with a variable as a key. Mention that it's useful for creating 
 
 ---
 
-## Question:
-What are enhanced object literals?
+## Question: What are enhanced object literals?
 
 ## Answer:
 ES6 enhanced object literals let you omit the `value` keyword when the variable name matches the property name, omit `function` keyword for methods, and use computed property names.
@@ -3437,8 +3282,7 @@ Show the before/after comparison. Mention that this makes code much cleaner, esp
 
 ---
 
-## Question:
-What are tagged template literals?
+## Question: What are tagged template literals?
 
 ## Answer:
 Tagged template literals are template literals processed by a function. The function receives the string parts and interpolated values as separate arguments.
@@ -3457,8 +3301,7 @@ Give a practical example like SQL sanitization or HTML escaping. Mention that st
 
 ---
 
-## Question:
-What are template literal expressions?
+## Question: What are template literal expressions?
 
 ## Answer:
 Template literal expressions are JavaScript expressions embedded inside template literals using `${expression}`. The expression is evaluated and its result is inserted into the string.
@@ -3477,8 +3320,7 @@ Show examples of different expression types. Mention that they work with any Jav
 
 ---
 
-## Question:
-What is optional chaining?
+## Question: What is optional chaining?
 
 ## Answer:
 Optional chaining (`?.`) safely accesses nested properties. If any part of the chain is `null` or `undefined`, it returns `undefined` instead of throwing an error.
@@ -3497,8 +3339,7 @@ Give a practical example like accessing nested API data. Compare with the old `&
 
 ---
 
-## Question:
-What is nullish coalescing?
+## Question: What is nullish coalescing?
 
 ## Answer:
 The nullish coalescing operator (`??`) returns the right operand when the left is `null` or `undefined`. Unlike `||`, it treats `0` and `""` as valid values.
@@ -3517,8 +3358,7 @@ Explain the key difference from `||`. The `0` example shows why `??` exists.
 
 ---
 
-## Question:
-What is logical assignment (`&&=`, `||=`, `??=`)?
+## Question: What is logical assignment (`&&=`, `||=`, `??=`)?
 
 ## Answer:
 Logical assignment operators combine logical operations with assignment. `&&=` assigns only if the left operand is truthy. `||=` assigns if the left is falsy. `??=` assigns if the left is null/undefined.
@@ -3537,8 +3377,7 @@ Show practical examples. `??=` is especially useful for setting defaults without
 
 ---
 
-## Question:
-What is object rest?
+## Question: What is object rest?
 
 ## Answer:
 Object rest collects remaining properties of an object into a new object. It uses the `...` syntax in destructuring.
@@ -3557,8 +3396,7 @@ Show an example like excluding `id` from an object. Mention that it's useful for
 
 ---
 
-## Question:
-What is object spread?
+## Question: What is object spread?
 
 ## Answer:
 Object spread creates a shallow copy of an object or merges objects. It uses the `...` syntax in object literals.
@@ -3577,8 +3415,7 @@ Compare with `Object.assign()`. Mention that spread creates a new object while `
 
 ---
 
-## Question:
-How does spread differ from `Object.assign()`?
+## Question: How does spread differ from `Object.assign()`?
 
 ## Answer:
 Both create shallow copies and merge objects, but spread is cleaner syntax and doesn't mutate the target. `Object.assign()` mutates the first argument (target), while spread always creates a new object.
@@ -3597,8 +3434,7 @@ Show the mutation difference. Mention that spread is preferred for its immutabil
 
 ---
 
-## Question:
-What are named exports?
+## Question: What are named exports?
 
 ## Answer:
 Named exports let you export multiple values from a module by name. When importing, you specify exactly which values you want.
@@ -3617,8 +3453,7 @@ Compare with default exports. Named exports are better for tree shaking and expl
 
 ---
 
-## Question:
-What are default exports?
+## Question: What are default exports?
 
 ## Answer:
 Default exports export a single value as the default from a module. When importing, you can name it anything — the import name doesn't have to match.
@@ -3637,8 +3472,7 @@ Compare with named exports. Default exports are simpler but less explicit. React
 
 ---
 
-## Question:
-What are namespace imports?
+## Question: What are namespace imports?
 
 ## Answer:
 Namespace imports import everything from a module under a single name. You use `import * as name from "./module"`.
@@ -3657,8 +3491,7 @@ Show an example with a utility module. Mention that it's clean for modules with 
 
 ---
 
-## Question:
-What are re-exports?
+## Question: What are re-exports?
 
 ## Answer:
 Re-exports let you export values from another module without importing them first. They're used to create a public API or barrel files.
@@ -3677,8 +3510,7 @@ Mention barrel files and how re-exports create clean module interfaces. Show a p
 
 ---
 
-## Question:
-What is dynamic import?
+## Question: What is dynamic import?
 
 ## Answer:
 Dynamic imports use `import()` as a function to load modules on demand. They return a Promise that resolves to the module's namespace.
@@ -3697,8 +3529,7 @@ Show a practical example like lazy loading a React component. Mention that this 
 
 ---
 
-## Question:
-What is top-level await?
+## Question: What is top-level await?
 
 ## Answer:
 Top-level `await` lets you use `await` outside of `async` functions in ES modules. It pauses module execution until the Promise resolves.
@@ -3717,8 +3548,7 @@ Mention that it only works in ES modules. Give an example like loading a config 
 
 ---
 
-## Question:
-What is module caching?
+## Question: What is module caching?
 
 ## Answer:
 When a module is imported, the JavaScript engine caches it. Subsequent imports return the same cached module instance, not re-execute the module code.
@@ -3737,8 +3567,7 @@ Mention that this means module-level side effects only run once. Give an example
 
 ---
 
-## Question:
-What is tree shaking?
+## Question: What is tree shaking?
 
 ## Answer:
 Tree shaking is dead code elimination that removes unused exports from your bundle. It works by analyzing which exports are actually imported and used, and excluding the rest.
@@ -3757,8 +3586,7 @@ Mention that tree shaking requires ES modules. Explain why CommonJS can't be tre
 
 ---
 
-## Question:
-What are side effects in modules?
+## Question: What are side effects in modules?
 
 ## Answer:
 Side effects in modules are operations that affect the outside world when the module loads — like modifying global variables, setting up DOM elements, or logging. Modules with side effects can't be fully tree-shaken.
@@ -3777,8 +3605,7 @@ Explain how side effects affect tree shaking. Mention the `sideEffects` field in
 
 ---
 
-## Question:
-What is strict mode in modules?
+## Question: What is strict mode in modules?
 
 ## Answer:
 ES modules are automatically in strict mode — you don't need to add `"use strict"`. This means no undeclared variables, no `with` statement, no duplicate parameters, and more secure `this` behavior.
@@ -3797,8 +3624,7 @@ Mention that modules are automatically strict. Compare with scripts where you ne
 
 ---
 
-## Question:
-What is `import.meta`?
+## Question: What is `import.meta`?
 
 ## Answer:
 `import.meta` is an object containing metadata about the current module. It has a `url` property with the module's URL.
@@ -3817,8 +3643,7 @@ Give an example like loading an image relative to the module's location. Mention
 
 ---
 
-## Question:
-What are private class fields (`#`)?
+## Question: What are private class fields (`#`)?
 
 ## Answer:
 Private class fields use `#` prefix to make properties truly private — they can't be accessed from outside the class. This is different from the `_` convention, which is just a naming hint.
@@ -3837,8 +3662,7 @@ Compare with the `_` convention. Mention that `#` is enforced by the language, n
 
 ---
 
-## Question:
-What are static class methods?
+## Question: What are static class methods?
 
 ## Answer:
 Static methods belong to the class itself, not instances. You call them on the class: `ClassName.method()`. They're used for utility functions and factory methods.
@@ -3857,8 +3681,7 @@ Give examples like `Array.from()` or `Object.keys()` as static methods. Mention 
 
 ---
 
-## Question:
-What are static class properties?
+## Question: What are static class properties?
 
 ## Answer:
 Static properties are properties that belong to the class itself, not instances. They're defined with the `static` keyword.
@@ -3877,8 +3700,7 @@ Give examples like a counter that tracks how many instances have been created. M
 
 ---
 
-## Question:
-What are getters and setters in classes?
+## Question: What are getters and setters in classes?
 
 ## Answer:
 Getters and setters in classes define custom behavior when reading or writing properties. Getters run on access, setters run on assignment.
@@ -3897,8 +3719,7 @@ Show a practical example like a `fullName` getter that combines `firstName` and 
 
 ---
 
-## Question:
-What are private methods?
+## Question: What are private methods?
 
 ## Answer:
 Private methods use the `#` prefix and can only be called from within the class. They're useful for internal helper functions that shouldn't be exposed.
@@ -3917,8 +3738,7 @@ Give an example like an internal validation method that the public methods call.
 
 ---
 
-## Question:
-What are decorators (Stage 3)?
+## Question: What are decorators (Stage 3)?
 
 ## Answer:
 Decorators are a Stage 3 proposal for adding metadata and modifying classes, methods, and properties. They use the `@decorator` syntax and are commonly used in frameworks like Angular and NestJS.
@@ -3941,8 +3761,7 @@ Mention that decorators are widely used in Angular even though they're not yet s
 
 ---
 
-## Question:
-How does JavaScript run inside the browser?
+## Question: How does JavaScript run inside the browser?
 
 ## Answer:
 JavaScript runs in the browser's JavaScript engine (like V8 in Chrome). The engine parses the code, compiles it to bytecode or machine code, and executes it. The browser also provides Web APIs for DOM, network, and storage.
@@ -3961,8 +3780,7 @@ Mention the specific engine (V8 for Chrome, SpiderMonkey for Firefox). Explain t
 
 ---
 
-## Question:
-What is the JavaScript engine?
+## Question: What is the JavaScript engine?
 
 ## Answer:
 The JavaScript engine is the program that executes JavaScript code. It parses the source code, compiles it, and runs it. Each browser has its own engine — V8 for Chrome/Edge, SpiderMonkey for Firefox, JavaScriptCore for Safari.
@@ -3981,8 +3799,7 @@ Mention the engines by name. Explain that JIT compilation optimizes frequently e
 
 ---
 
-## Question:
-What is the V8 engine?
+## Question: What is the V8 engine?
 
 ## Answer:
 V8 is Google's JavaScript engine used in Chrome and Node.js. It compiles JavaScript directly to machine code using JIT compilation, making it very fast.
@@ -4001,8 +3818,7 @@ Mention JIT compilation and hidden classes. Explain that V8's performance is why
 
 ---
 
-## Question:
-What is SpiderMonkey?
+## Question: What is SpiderMonkey?
 
 ## Answer:
 SpiderMonkey is Mozilla's JavaScript engine used in Firefox. It was the first JavaScript engine ever created (by Brendan Eich in 1995). It has gone through many optimizations over the years.
@@ -4021,8 +3837,7 @@ Mention that it was the first JS engine. You don't need to know deep internals �
 
 ---
 
-## Question:
-What happens when you open a webpage?
+## Question: What happens when you open a webpage?
 
 ## Answer:
 The browser fetches the HTML, parses it into a DOM, fetches CSS and JavaScript files, builds the CSSOM, combines DOM and CSSOM into a render tree, calculates layout, and paints pixels to the screen.
@@ -4042,8 +3857,7 @@ Draw the rendering pipeline. Mention that this is why render-blocking resources 
 
 ---
 
-## Question:
-What is the rendering pipeline?
+## Question: What is the rendering pipeline?
 
 ## Answer:
 The rendering pipeline is the process the browser uses to convert HTML, CSS, and JavaScript into pixels on the screen. The stages are: DOM construction, CSSOM construction, Render Tree, Layout, Paint, and Composite.
@@ -4063,8 +3877,7 @@ Mention each stage briefly. Explain that JavaScript can trigger re-layout and re
 
 ---
 
-## Question:
-What is the DOM?
+## Question: What is the DOM?
 
 ## Answer:
 The DOM (Document Object Model) is a tree-like representation of the HTML document. It's an API that lets JavaScript interact with and manipulate the page content, structure, and styles.
@@ -4083,8 +3896,7 @@ Explain that DOM operations are expensive because they trigger layout recalculat
 
 ---
 
-## Question:
-What is the BOM?
+## Question: What is the BOM?
 
 ## Answer:
 The BOM (Browser Object Model) provides APIs for interacting with the browser itself — not the page content. It includes `window`, `navigator`, `location`, `history`, and `screen`.
@@ -4103,8 +3915,7 @@ Give examples of when you'd use each BOM API. Mention that the BOM is not standa
 
 ---
 
-## Question:
-What is the CSSOM?
+## Question: What is the CSSOM?
 
 ## Answer:
 The CSSOM (CSS Object Model) is a tree-like representation of all CSS styles applied to the document. The browser builds it by parsing CSS files and inline styles.
@@ -4123,8 +3934,7 @@ Mention that CSS is render-blocking — the browser won't paint until it has the
 
 ---
 
-## Question:
-What is the Render Tree?
+## Question: What is the Render Tree?
 
 ## Answer:
 The Render Tree is the combination of the DOM and CSSOM. It contains only the nodes that will be visible on screen (excludes `display: none` elements). Each node has its computed styles.
@@ -4143,8 +3953,7 @@ Mention that hidden elements (`display: none`) are excluded. Explain that changi
 
 ---
 
-## Question:
-What causes layout recalculation?
+## Question: What causes layout recalculation?
 
 ## Answer:
 Layout recalculation happens when the geometry of elements changes — like width, height, position, or margin. JavaScript properties like `offsetWidth`, `offsetHeight`, `getComputedStyle()`, and `getBoundingClientRect()` also trigger it.
@@ -4163,8 +3972,7 @@ Explain layout thrashing and how to avoid it. Mention that reading layout proper
 
 ---
 
-## Question:
-What causes repaint?
+## Question: What causes repaint?
 
 ## Answer:
 Repaint happens when visual properties change but not the layout — like color, background, visibility, or shadows. The browser redraws the affected pixels without recalculating layout.
@@ -4183,8 +3991,7 @@ Compare with reflow (layout). Mention that repaints are less expensive but still
 
 ---
 
-## Question:
-What causes reflow?
+## Question: What causes reflow?
 
 ## Answer:
 Reflow (also called layout) happens when the geometry of elements changes — like size, position, or when the page first loads. It's the most expensive rendering operation because it can affect the entire page.
@@ -4203,8 +4010,7 @@ Explain that reflow is expensive because it can cascade. Give examples of what t
 
 ---
 
-## Question:
-What is layout thrashing?
+## Question: What is layout thrashing?
 
 ## Answer:
 Layout thrashing happens when you repeatedly read and write layout properties in a loop. Each write triggers a layout recalculation, and each read forces the browser to compute the layout synchronously.
@@ -4223,8 +4029,7 @@ Give a concrete code example of layout thrashing. Show how to fix it by batching
 
 ---
 
-## Question:
-How do browsers optimize rendering?
+## Question: How do browsers optimize rendering?
 
 ## Key Points:
 - Batching DOM updates.
@@ -4243,8 +4048,7 @@ Mention that `transform` and `opacity` are GPU-accelerated and don't trigger lay
 
 ---
 
-## Question:
-What is `requestAnimationFrame`?
+## Question: What is `requestAnimationFrame`?
 
 ## Answer:
 `requestAnimationFrame` tells the browser to call your function before the next repaint. It's synchronized with the display's refresh rate (typically 60fps), making animations smooth and efficient.
@@ -4263,8 +4067,7 @@ Compare with `setTimeout` — rAF is more efficient and doesn't run when the tab
 
 ---
 
-## Question:
-What is `requestIdleCallback`?
+## Question: What is `requestIdleCallback`?
 
 ## Answer:
 `requestIdleCallback` lets you schedule work when the browser is idle. It's useful for non-essential work like analytics, prefetching, or background updates that shouldn't block the main thread.
@@ -4283,8 +4086,7 @@ Mention that it's not supported in Safari. Give examples of when to use it vs `r
 
 ---
 
-## Question:
-What is MutationObserver?
+## Question: What is MutationObserver?
 
 ## Answer:
 MutationObserver watches for changes to the DOM — like added/removed nodes, attribute changes, or text content changes. It's the modern replacement for deprecated DOM mutation events.
@@ -4303,8 +4105,7 @@ Give a practical example like watching for dynamically added elements. Mention t
 
 ---
 
-## Question:
-What is IntersectionObserver?
+## Question: What is IntersectionObserver?
 
 ## Answer:
 IntersectionObserver watches when an element enters or exits the viewport or another element. It's much more efficient than scroll event listeners for detecting visibility.
@@ -4323,8 +4124,7 @@ Show a lazy loading example. Mention that it's much more efficient than scroll e
 
 ---
 
-## Question:
-What is ResizeObserver?
+## Question: What is ResizeObserver?
 
 ## Answer:
 `ResizeObserver` watches for changes to an element's size. It's useful for responsive layouts where you need to react to size changes, like container queries.
@@ -4343,8 +4143,7 @@ Mention that it's better than window resize events because it watches specific e
 
 ---
 
-## Question:
-What is Performance API?
+## Question: What is Performance API?
 
 ## Answer:
 The Performance API provides methods to measure and analyze web page performance. It includes high-resolution timestamps, resource timing, navigation timing, and user timing.
@@ -4363,8 +4162,7 @@ Give examples of measuring specific operations. Mention that `performance.now()`
 
 ---
 
-## Question:
-What is Navigation Timing API?
+## Question: What is Navigation Timing API?
 
 ## Answer:
 The Navigation Timing API provides detailed timing information about page navigation — from the initial request to the page fully loading. It includes DNS lookup, TCP connection, server response, DOM parsing, and rendering times.
@@ -4383,8 +4181,7 @@ Mention specific timing metrics like TTFB (Time to First Byte). Explain how it h
 
 ---
 
-## Question:
-What is Paint Timing API?
+## Question: What is Paint Timing API?
 
 ## Answer:
 The Paint Timing API provides timestamps for when the first pixel is painted on the screen. It includes First Paint (FP) and First Contentful Paint (FCP).
@@ -4403,8 +4200,7 @@ Explain the difference between FP and FCP. Mention that FCP is a Core Web Vital 
 
 ---
 
-## Question:
-What is Long Task API?
+## Question: What is Long Task API?
 
 ## Answer:
 The Long Task API detects tasks that take longer than 50ms. These tasks block the main thread and can cause UI jank. The API fires a `longtask` event when a long task is detected.
@@ -4423,8 +4219,7 @@ Mention the 50ms threshold. Explain that long tasks cause UI jank and why detect
 
 ---
 
-## Question:
-How do browsers garbage collect DOM nodes?
+## Question: How do browsers garbage collect DOM nodes?
 
 ## Answer:
 Browsers garbage collect DOM nodes when they're no longer reachable — when there are no JavaScript references to them and they're not in the DOM tree. If you keep a reference to a detached DOM node, it won't be garbage collected.
@@ -4447,8 +4242,7 @@ Explain detached DOM nodes and why they cause memory leaks. Mention that removin
 
 ---
 
-## Question:
-Explain the JavaScript Event Loop.
+## Question: Explain the JavaScript Event Loop.
 
 ## Answer:
 The event loop is a mechanism that allows JavaScript to perform non-blocking operations. It continuously checks if the call stack is empty, then picks the next task from the microtask queue or macrotask queue.
@@ -4467,8 +4261,7 @@ Draw the event loop diagram. Explain the exact order of execution. Give a code e
 
 ---
 
-## Question:
-What is the task queue?
+## Question: What is the task queue?
 
 ## Answer:
 The task queue (macrotask queue) holds callbacks from macrotasks like `setTimeout`, `setInterval`, I/O operations, and UI rendering. The event loop processes one macrotask per iteration, after all microtasks.
@@ -4487,8 +4280,7 @@ Explain the difference between the task queue (macrotasks) and the microtask que
 
 ---
 
-## Question:
-What is the microtask queue?
+## Question: What is the microtask queue?
 
 ## Answer:
 The microtask queue holds callbacks from microtasks like `Promise.then`, `catch`, `finally`, `queueMicrotask()`, and `MutationObserver`. Microtasks are processed completely before the next macrotask.
@@ -4507,8 +4299,7 @@ Emphasize that microtasks always run first. Give a code example showing Promise 
 
 ---
 
-## Question:
-Which runs first: microtask or macrotask?
+## Question: Which runs first: microtask or macrotask?
 
 ## Answer:
 Microtasks always run first. After each macrotask, the event loop processes ALL microtasks before moving to the next macrotask. This means Promises resolve before setTimeout callbacks, regardless of when they were queued.
@@ -4527,8 +4318,7 @@ Give a code example proving microtasks run first. This is a common interview que
 
 ---
 
-## Question:
-What are macrotasks?
+## Question: What are macrotasks?
 
 ## Answer:
 Macrotasks are tasks that go in the macrotask queue — like `setTimeout`, `setInterval`, I/O callbacks, and UI rendering. One macrotask is processed per event loop iteration, after all microtasks.
@@ -4547,8 +4337,7 @@ Give examples of macrotasks. Explain that only one is processed per iteration, a
 
 ---
 
-## Question:
-What are microtasks?
+## Question: What are microtasks?
 
 ## Answer:
 Microtasks are tasks that go in the microtask queue — like Promise callbacks and `queueMicrotask()`. They have higher priority and are processed completely before the next macrotask.
@@ -4567,8 +4356,7 @@ Give examples of microtasks. Explain that they always run before macrotasks.
 
 ---
 
-## Question:
-Where does Promise execute?
+## Question: Where does Promise execute?
 
 ## Answer:
 Promise callbacks (`.then`, `.catch`, `.finally`) execute in the microtask queue. When a Promise resolves, its callbacks are added to the microtask queue and processed before the next macrotask.
@@ -4586,8 +4374,7 @@ Give a code example showing Promise running before setTimeout. Explain that this
 
 ---
 
-## Question:
-Where does setTimeout execute?
+## Question: Where does setTimeout execute?
 
 ## Answer:
 `setTimeout` callbacks execute in the macrotask queue (callback queue). After the delay, the callback is added to the macrotask queue and processed after all microtasks.
@@ -4606,8 +4393,7 @@ Explain why setTimeout with 0ms delay doesn't execute immediately. Give a code e
 
 ---
 
-## Question:
-What happens when delay is 0ms?
+## Question: What happens when delay is 0ms?
 
 ## Answer:
 With 0ms delay, the callback is still added to the macrotask queue. It doesn't execute immediately — it waits for the current synchronous code and all microtasks to finish. The delay is 0ms, but the actual timing depends on the event loop.
@@ -4626,8 +4412,7 @@ Explain that 0ms doesn't mean instant execution. Give a code example showing the
 
 ---
 
-## Question:
-What is `queueMicrotask()`?
+## Question: What is `queueMicrotask()`?
 
 ## Answer:
 `queueMicrotask()` explicitly adds a function to the microtask queue. It's the modern, standardized way to schedule microtasks (instead of `Promise.resolve().then(...)`).
@@ -4646,8 +4431,7 @@ Compare with `Promise.resolve().then()` — `queueMicrotask()` is cleaner and mo
 
 ---
 
-## Question:
-What is `process.nextTick()`?
+## Question: What is `process.nextTick()`?
 
 ## Answer:
 `process.nextTick()` is a Node.js-specific function that schedules a callback to run after the current operation completes, before the event loop continues. It's more urgent than microtasks.
@@ -4666,8 +4450,7 @@ Mention that it's Node.js-specific. Explain that it runs before microtasks, whic
 
 ---
 
-## Question:
-What is `setImmediate()`?
+## Question: What is `setImmediate()`?
 
 ## Answer:
 `setImmediate()` is a Node.js-specific function that schedules a callback to run after the current event loop iteration completes. It's like `setTimeout(fn, 0)` but more efficient in Node.js.
@@ -4686,8 +4469,7 @@ Mention that it's Node.js-specific. Explain the order: `process.nextTick` → mi
 
 ---
 
-## Question:
-Difference between nextTick and Promise?
+## Question: Difference between nextTick and Promise?
 
 ## Answer:
 `process.nextTick` runs before Promise callbacks in Node.js. It's scheduled at a higher priority. `Promise.then` callbacks go to the microtask queue, which runs after `process.nextTick`.
@@ -4706,8 +4488,7 @@ Explain the priority order. Mention that this is Node.js-specific behavior.
 
 ---
 
-## Question:
-Difference between setImmediate and setTimeout?
+## Question: Difference between setImmediate and setTimeout?
 
 ## Answer:
 `setImmediate` runs after the current event loop iteration (after I/O callbacks). `setTimeout(fn, 0)` is added to the timer queue and runs in the next event loop iteration. In practice, `setImmediate` is often faster in Node.js.
@@ -4726,8 +4507,7 @@ Explain that execution order isn't guaranteed. Mention that `setImmediate` is mo
 
 ---
 
-## Question:
-Explain event loop with an example.
+## Question: Explain event loop with an example.
 
 ## Answer:
 ```javascript
@@ -4753,8 +4533,7 @@ Walk through the example step by step. Explain each phase clearly. This is a cla
 
 ---
 
-## Question:
-Explain event loop inside Node.js.
+## Question: Explain event loop inside Node.js.
 
 ## Answer:
 Node.js event loop phases: timers → pending callbacks → idle/prepare → poll → check → close callbacks. Each phase has its own queue. The loop moves through phases in order.
@@ -4774,8 +4553,7 @@ Mention the phases briefly. Focus on the key difference: Node.js has more phases
 
 ---
 
-## Question:
-Explain browser event loop.
+## Question: Explain browser event loop.
 
 ## Answer:
 The browser event loop is simpler than Node.js. It has a call stack, a microtask queue, and a macrotask queue. The loop checks if the stack is empty, processes all microtasks, then processes one macrotask.
@@ -4794,8 +4572,7 @@ Compare with Node.js event loop. Mention that browser rendering happens between 
 
 ---
 
-## Question:
-What blocks the event loop?
+## Question: What blocks the event loop?
 
 ## Answer:
 Long synchronous operations block the event loop — like heavy computations, synchronous network requests, or blocking I/O. While the event loop is blocked, no async callbacks, UI updates, or user interactions can happen.
@@ -4814,8 +4591,7 @@ Give examples of what blocks the event loop. Mention that web workers or async o
 
 ---
 
-## Question:
-How do you avoid blocking the event loop?
+## Question: How do you avoid blocking the event loop?
 
 ## Answer:
 Use async operations for I/O, break heavy computations into smaller chunks with `setTimeout` or `requestAnimationFrame`, use web workers for CPU-intensive tasks, and avoid synchronous operations on the main thread.
@@ -4834,8 +4610,7 @@ Give practical solutions. Mention web workers for CPU-intensive tasks. Profile w
 
 ---
 
-## Question:
-Why is JavaScript single-threaded?
+## Question: Why is JavaScript single-threaded?
 
 ## Answer:
 JavaScript is single-threaded to keep it simple and avoid concurrency issues. With one thread, you don't need locks, race conditions, or complex synchronization. The event loop and async operations provide non-blocking behavior without multiple threads.
@@ -4858,8 +4633,7 @@ Explain the trade-off: simplicity vs parallelism. Mention web workers as the sol
 
 ---
 
-## Question:
-What is heap memory?
+## Question: What is heap memory?
 
 ## Answer:
 Heap memory is where JavaScript stores objects, arrays, functions, and closures. Unlike stack memory, heap memory is dynamically allocated and doesn't have a fixed size. Objects are allocated on the heap when they're created.
@@ -4878,8 +4652,7 @@ Compare with stack memory. Explain that objects live on the heap while primitive
 
 ---
 
-## Question:
-What is stack memory?
+## Question: What is stack memory?
 
 ## Answer:
 Stack memory stores primitive values and function execution contexts. It's fast and automatically managed — values are pushed when created and popped when the function returns. The stack has a fixed size.
@@ -4898,8 +4671,7 @@ Compare with heap memory. Explain that primitives are on the stack, objects on t
 
 ---
 
-## Question:
-How are primitive values stored?
+## Question: How are primitive values stored?
 
 ## Answer:
 Primitive values are stored directly on the stack. When you assign a primitive to another variable, the value is copied. Each variable has its own copy of the value.
@@ -4918,8 +4690,7 @@ Give an example showing that primitives are copied by value. Contrast with objec
 
 ---
 
-## Question:
-How are objects stored?
+## Question: How are objects stored?
 
 ## Answer:
 Objects are stored on the heap. The variable holds a reference (pointer) to the object, not the object itself. When you assign an object to another variable, the reference is copied — both variables point to the same object.
@@ -4938,8 +4709,7 @@ Give an example showing reference behavior. Mention that this is why you need to
 
 ---
 
-## Question:
-What is pass by value?
+## Question: What is pass by value?
 
 ## Answer:
 Pass by value means a copy of the value is passed to a function. Changes to the parameter inside the function don't affect the original variable. Primitives are always passed by value in JavaScript.
@@ -4955,8 +4725,7 @@ Give an example showing that changing a parameter doesn't affect the original. M
 
 ---
 
-## Question:
-What is pass by reference?
+## Question: What is pass by reference?
 
 ## Answer:
 In JavaScript, objects are "passed by reference value" — the reference is passed by value. This means the function receives a copy of the reference, but both the original and the copy point to the same object. Changes to the object's properties are visible outside the function.
@@ -4975,8 +4744,7 @@ Explain the nuance — it's pass by reference value, not true pass by reference.
 
 ---
 
-## Question:
-How does garbage collection work?
+## Question: How does garbage collection work?
 
 ## Answer:
 Garbage collection automatically frees memory that's no longer reachable. The most common algorithm is mark-and-sweep: the engine marks all reachable objects from root references, then sweeps (frees) everything not marked.
@@ -4995,8 +4763,7 @@ Explain mark-and-sweep clearly. Mention that you can't force garbage collection,
 
 ---
 
-## Question:
-What is Mark-and-Sweep?
+## Question: What is Mark-and-Sweep?
 
 ## Answer:
 Mark-and-sweep is the garbage collection algorithm used by JavaScript engines. It works in two phases: mark all reachable objects starting from root references, then sweep (free) all unmarked objects.
@@ -5015,8 +4782,7 @@ Explain the two phases clearly. Mention that it handles circular references, whi
 
 ---
 
-## Question:
-What causes memory leaks?
+## Question: What causes memory leaks?
 
 ## Answer:
 Memory leaks happen when objects are no longer needed but are still referenced, preventing garbage collection. Common causes include forgotten event listeners, detached DOM nodes, closures that capture large objects, and global variables.
@@ -5036,8 +4802,7 @@ Give specific examples from experience. Mention Chrome DevTools as your debuggin
 
 ---
 
-## Question:
-How do closures affect memory?
+## Question: How do closures affect memory?
 
 ## Answer:
 Closures keep references to their outer scope's variables alive as long as the closure exists. If a closure captures a large object, that object can't be garbage collected even if the outer function has returned.
@@ -5056,8 +4821,7 @@ Explain that closures are designed to keep variables alive. Give an example of w
 
 ---
 
-## Question:
-How do event listeners cause memory leaks?
+## Question: How do event listeners cause memory leaks?
 
 ## Answer:
 Event listeners keep references to their callback functions and any objects those callbacks reference. If you add event listeners without removing them, especially on elements that are removed from the DOM, the referenced objects can't be garbage collected.
@@ -5076,8 +4840,7 @@ Give a React example with `useEffect` cleanup. Explain that removing the element
 
 ---
 
-## Question:
-What are detached DOM nodes?
+## Question: What are detached DOM nodes?
 
 ## Answer:
 Detached DOM nodes are elements that have been removed from the DOM tree but are still referenced by JavaScript. Since JavaScript still holds a reference, the garbage collector can't free them.
@@ -5096,8 +4859,7 @@ Give an example like caching a DOM element that's later replaced. Explain how to
 
 ---
 
-## Question:
-What is WeakMap?
+## Question: What is WeakMap?
 
 ## Answer:
 WeakMaps are collections with object keys that are held weakly. If there are no other references to a key object, it can be garbage collected, along with its value in the WeakMap.
@@ -5116,8 +4878,7 @@ Explain why WeakMaps exist — memory management. Give a practical example like 
 
 ---
 
-## Question:
-What is WeakSet?
+## Question: What is WeakSet?
 
 ## Answer:
 WeakSets are Sets where values must be objects and are held weakly. If there are no other references to an object, it can be garbage collected.
@@ -5136,8 +4897,7 @@ Explain the memory management benefit. Give an example like tracking processed D
 
 ---
 
-## Question:
-How do WeakMap and WeakSet help memory?
+## Question: How do WeakMap and WeakSet help memory?
 
 ## Answer:
 WeakMap and WeakSet hold weak references to objects, meaning the garbage collector can free those objects if no other references exist. This prevents memory leaks that would occur with regular Maps/Sets holding strong references.
@@ -5180,8 +4940,7 @@ Mention the four pillars briefly. Explain that JavaScript's OOP is prototype-bas
 
 ---
 
-## Question:
-What are the four pillars of OOP?
+## Question: What are the four pillars of OOP?
 
 ## Answer:
 The four pillars are: encapsulation (bundling data and methods, hiding internal state), abstraction (hiding complexity, exposing only what's needed), inheritance (reusing code through parent-child relationships), and polymorphism (same interface, different implementations).
@@ -5199,8 +4958,7 @@ Give a practical example of each pillar. Don't just define them — show how you
 
 ---
 
-## Question:
-How is encapsulation achieved?
+## Question: How is encapsulation achieved?
 
 ## Answer:
 Encapsulation bundles data and methods into a single unit (object) and restricts access to internal state. In JavaScript, you achieve it with closures, private class fields (`#`), and getters/setters.
@@ -5219,8 +4977,7 @@ Show how to use private fields and getters/setters. Mention that JavaScript's pr
 
 ---
 
-## Question:
-What is abstraction?
+## Question: What is abstraction?
 
 ## Answer:
 Abstraction hides complex implementation details and exposes only the essential features. Users of the abstraction don't need to know how it works internally — they just use the interface.
@@ -5239,8 +4996,7 @@ Give a practical example like an API client abstraction. Mention that it simplif
 
 ---
 
-## Question:
-What is inheritance?
+## Question: What is inheritance?
 
 ## Answer:
 Inheritance lets a class inherit properties and methods from another class. It enables code reuse — child classes get parent functionality for free and can add or override behavior.
@@ -5259,8 +5015,7 @@ Show a class inheritance example. Mention that JavaScript's inheritance is proto
 
 ---
 
-## Question:
-What is polymorphism?
+## Question: What is polymorphism?
 
 ## Answer:
 Polymorphism means "many forms" — the same interface can work with different types. In JavaScript, you can call the same method on different objects and get different behavior.
@@ -5279,8 +5034,7 @@ Give a practical example like different shapes with a `draw()` method. Mention t
 
 ---
 
-## Question:
-What are ES6 classes?
+## Question: What are ES6 classes?
 
 ## Answer:
 ES6 classes provide a cleaner syntax for creating objects and implementing inheritance. They're syntactic sugar over prototypes — under the hood, they still use the prototype mechanism.
@@ -5300,8 +5054,7 @@ Mention that classes are syntactic sugar. Explain that the underlying mechanism 
 
 ---
 
-## Question:
-Are classes real classes?
+## Question: Are classes real classes?
 
 ## Answer:
 No — JavaScript classes are syntactic sugar over prototypes. They're not like classes in Java or C++. They don't create new scope, don't have true privacy (until private fields), and are more like constructor functions with nicer syntax.
@@ -5320,8 +5073,7 @@ This is a great question to show depth. Explain that prototypes are the real mec
 
 ---
 
-## Question:
-Difference between constructor function and class?
+## Question: Difference between constructor function and class?
 
 ## Answer:
 Constructor functions are the pre-ES6 way to create objects with shared behavior. ES6 classes provide the same functionality with cleaner syntax. Under the hood, they're identical — classes use the same prototype mechanism.
@@ -5340,8 +5092,7 @@ Show a side-by-side comparison. Mention that they're identical under the hood �
 
 ---
 
-## Question:
-What is super()?
+## Question: What is super()?
 
 ## Answer:
 `super()` calls the parent class's constructor. It must be called before using `this` in a child class constructor. It also allows access to parent methods via `super.methodName()`.
@@ -5360,8 +5111,7 @@ Show that `super()` must be called before `this`. Give an example of calling par
 
 ---
 
-## Question:
-What is extends?
+## Question: What is extends?
 
 ## Answer:
 `extends` creates a class that inherits from another class. The child class gets all the parent's methods and properties and can add or override them.
@@ -5380,8 +5130,7 @@ Show a simple inheritance example. Mention that the child can override parent me
 
 ---
 
-## Question:
-What is instanceof?
+## Question: What is instanceof?
 
 ## Answer:
 `instanceof` checks if an object is an instance of a particular class by walking up the prototype chain. It returns `true` if the object's prototype chain includes the class's prototype.
@@ -5400,8 +5149,7 @@ Give an example like checking if something is an Array. Mention the cross-frame 
 
 ---
 
-## Question:
-What are static methods?
+## Question: What are static methods?
 
 ## Answer:
 Static methods belong to the class, not instances. You call them on the class itself: `ClassName.method()`. They're used for utility functions and factory methods.
@@ -5420,8 +5168,7 @@ Give examples like `Array.from()` or `Object.keys()` as static methods. Mention 
 
 ---
 
-## Question:
-What are private fields?
+## Question: What are private fields?
 
 ## Answer:
 Private fields use the `#` prefix and can only be accessed from within the class. They provide true privacy — unlike the `_` convention, they're enforced by the language.
@@ -5440,8 +5187,7 @@ Compare with the `_` convention. Mention that `#` is enforced by the language, n
 
 ---
 
-## Question:
-When should you avoid classes?
+## Question: When should you avoid classes?
 
 ## Answer:
 Avoid classes when: you don't need shared behavior (use plain objects), you don't need inheritance (use composition), when functions are simpler (use pure functions), or when you're building functional-style code.
@@ -5464,8 +5210,7 @@ Mention composition over inheritance. Give examples of when plain objects or fun
 
 ---
 
-## Question:
-What is Functional Programming?
+## Question: What is Functional Programming?
 
 ## Answer:
 Functional programming is a paradigm that treats computation as the evaluation of pure functions and avoids changing state and mutable data. It emphasizes function composition, immutability, and avoiding side effects.
@@ -5484,8 +5229,7 @@ Explain why FP matters — testability, predictability, easier debugging. Give p
 
 ---
 
-## Question:
-What are pure functions?
+## Question: What are pure functions?
 
 ## Answer:
 Pure functions always return the same output for the same input and have no side effects. They don't modify external state, perform I/O, or depend on anything outside their parameters.
@@ -5504,8 +5248,7 @@ Give a concrete example of a pure vs impure function. Mention React and Redux as
 
 ---
 
-## Question:
-What are side effects?
+## Question: What are side effects?
 
 ## Answer:
 Side effects are any observable changes outside a function — modifying global variables, writing to files, making API calls, or changing the DOM. Functions with side effects are harder to test and reason about.
@@ -5524,8 +5267,7 @@ Give examples of side effects. Explain that the goal isn't to eliminate them but
 
 ---
 
-## Question:
-What is immutability?
+## Question: What is immutability?
 
 ## Answer:
 Immutability means data can't be changed after creation. Instead of modifying data, you create new copies with the changes. This prevents bugs from unexpected mutations and makes state changes predictable.
@@ -5544,8 +5286,7 @@ Explain why immutability matters — predictability and easier debugging. Give a
 
 ---
 
-## Question:
-What is function composition?
+## Question: What is function composition?
 
 ## Answer:
 Function composition combines multiple functions into one function. The output of one function becomes the input of the next. It creates complex operations from simple, reusable pieces.
@@ -5564,8 +5305,7 @@ Show a simple compose implementation. Give a practical example like a data proce
 
 ---
 
-## Question:
-What is currying?
+## Question: What is currying?
 
 ## Answer:
 Currying transforms a function with multiple arguments into a sequence of functions that each take one argument. `f(a, b, c)` becomes `f(a)(b)(c)`.
@@ -5584,8 +5324,7 @@ Show a currying implementation. Give a practical example like creating a logging
 
 ---
 
-## Question:
-What is partial application?
+## Question: What is partial application?
 
 ## Answer:
 Partial application fixes some arguments of a function, creating a new function with fewer arguments. It's like currying but you can fix multiple arguments at once.
@@ -5604,8 +5343,7 @@ Compare with currying — partial application fixes multiple arguments at once. 
 
 ---
 
-## Question:
-What is memoization?
+## Question: What is memoization?
 
 ## Answer:
 Memoization is caching the results of expensive function calls. If the function is called again with the same arguments, it returns the cached result instead of recalculating.
@@ -5624,8 +5362,7 @@ Show a simple memoize implementation. Give examples like caching API responses o
 
 ---
 
-## Question:
-What is lazy evaluation?
+## Question: What is lazy evaluation?
 
 ## Answer:
 Lazy evaluation delays computation until the result is needed. Values are computed on demand rather than upfront. This can save memory and computation time.
@@ -5644,8 +5381,7 @@ Give a generator example showing lazy evaluation. Mention that it's useful for l
 
 ---
 
-## Question:
-What are higher-order functions?
+## Question: What are higher-order functions?
 
 ## Answer:
 Higher-order functions take a function as an argument or return a function. They're fundamental to FP and enable patterns like callbacks, decorators, and function factories.
@@ -5664,8 +5400,7 @@ Give examples of built-in higher-order functions. Show how to create a simple on
 
 ---
 
-## Question:
-What is point-free programming?
+## Question: What is point-free programming?
 
 ## Answer:
 Point-free programming (or tacit programming) defines functions without explicitly mentioning their arguments. You compose functions together without naming the intermediate values.
@@ -5684,8 +5419,7 @@ Give a simple example. Mention that it's more concise but can be harder to read.
 
 ---
 
-## Question:
-What are monads?
+## Question: What are monads?
 
 ## Answer:
 Monads are a design pattern for handling context (like nullability, async, or errors) in a composable way. They wrap values and provide methods to chain operations while handling the context automatically.
@@ -5705,8 +5439,7 @@ Don't go too deep — mention Promise as a monad. Explain that monads make compo
 
 ---
 
-## Question:
-Why is FP useful in React?
+## Question: Why is FP useful in React?
 
 ## Answer:
 React embraces FP principles — components are pure functions (render), state is immutable, and data flows one way. FP patterns like pure functions, composition, and immutability align perfectly with React's design.
@@ -5725,8 +5458,7 @@ Explain how FP principles align with React. Mention hooks as a move toward FP pa
 
 ---
 
-## Question:
-Difference between FP and OOP?
+## Question: Difference between FP and OOP?
 
 ## Answer:
 OOP organizes code around objects with state and behavior. FP organizes code around pure functions without state. OOP emphasizes encapsulation and inheritance; FP emphasizes composition and immutability.
@@ -5745,8 +5477,7 @@ Don't say one is better. Explain when each is appropriate. Mention that modern c
 
 ---
 
-## Question:
-What libraries support FP?
+## Question: What libraries support FP?
 
 ## Answer:
 Libraries that support FP include Lodash/FP, Ramda, fp-ts (TypeScript), and Sanctuary. They provide utilities for currying, composition, immutability, and functional data structures.
@@ -5769,8 +5500,7 @@ Mention the libraries you've actually used. Don't list them all — pick 1-2 and
 
 ---
 
-## Question:
-Implement map().
+## Question: Implement map().
 
 ## Answer:
 ```javascript
@@ -5797,8 +5527,7 @@ Mention that map always returns an array of the same length. Show that you under
 
 ---
 
-## Question:
-Implement filter().
+## Question: Implement filter().
 
 ## Answer:
 ```javascript
@@ -5827,8 +5556,7 @@ Mention that filter can return an empty array. Show that you understand the call
 
 ---
 
-## Question:
-Implement reduce().
+## Question: Implement reduce().
 
 ## Answer:
 ```javascript
@@ -5857,8 +5585,7 @@ Handle the initial value case. Show that you understand the accumulator pattern.
 
 ---
 
-## Question:
-Implement bind().
+## Question: Implement bind().
 
 ## Answer:
 ```javascript
@@ -5883,8 +5610,7 @@ Show that you understand partial application. Mention that the bound `this` can'
 
 ---
 
-## Question:
-Implement call().
+## Question: Implement call().
 
 ## Answer:
 ```javascript
@@ -5906,8 +5632,7 @@ Mention that call is like apply but with individual arguments. Show the simple i
 
 ---
 
-## Question:
-Implement apply().
+## Question: Implement apply().
 
 ## Answer:
 ```javascript
@@ -5929,8 +5654,7 @@ Mention that apply is like call but with an array of arguments. Show the simple 
 
 ---
 
-## Question:
-Implement Promise.all().
+## Question: Implement Promise.all().
 
 ## Answer:
 ```javascript
@@ -5967,8 +5691,7 @@ Mention the fail-fast behavior. Show that results are in the same order as input
 
 ---
 
-## Question:
-Implement Promise.race().
+## Question: Implement Promise.race().
 
 ## Answer:
 ```javascript
@@ -5994,8 +5717,7 @@ Mention that other promises still run even if one settles first. Show the simple
 
 ---
 
-## Question:
-Implement debounce().
+## Question: Implement debounce().
 
 ## Answer:
 ```javascript
@@ -6021,8 +5743,7 @@ Show that you understand the closure pattern. Mention that it preserves `this` a
 
 ---
 
-## Question:
-Implement throttle().
+## Question: Implement throttle().
 
 ## Answer:
 ```javascript
@@ -6051,8 +5772,7 @@ Show that you understand the cooldown pattern. Mention that it fires immediately
 
 ---
 
-## Question:
-Implement deep clone().
+## Question: Implement deep clone().
 
 ## Answer:
 ```javascript
@@ -6085,8 +5805,7 @@ Mention circular reference handling. Show that you understand recursion and Weak
 
 ---
 
-## Question:
-Implement flatten().
+## Question: Implement flatten().
 
 ## Answer:
 ```javascript
@@ -6112,8 +5831,7 @@ Show that you understand recursion. Mention the depth parameter for controlling 
 
 ---
 
-## Question:
-Implement event emitter.
+## Question: Implement event emitter.
 
 ## Answer:
 ```javascript
@@ -6155,8 +5873,7 @@ Mention that this is the foundation of Node.js EventEmitter. Show the three core
 
 ---
 
-## Question:
-Implement curry().
+## Question: Implement curry().
 
 ## Answer:
 ```javascript
@@ -6183,8 +5900,7 @@ Show that you understand the argument counting pattern. Mention that it uses clo
 
 ---
 
-## Question:
-Implement memoize().
+## Question: Implement memoize().
 
 ## Answer:
 ```javascript
@@ -6218,8 +5934,7 @@ Mention that JSON.stringify is used for keys (simplification). Show that you und
 
 ---
 
-## Question:
-What is XSS?
+## Question: What is XSS?
 
 ## Answer:
 XSS (Cross-Site Scripting) is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users. It happens when user input is displayed without proper sanitization.
@@ -6238,8 +5953,7 @@ Give an example of XSS (like injecting a script tag in a comment). Mention speci
 
 ---
 
-## Question:
-What is CSRF?
+## Question: What is CSRF?
 
 ## Answer:
 CSRF (Cross-Site Request Forgery) tricks a logged-in user's browser into making unwanted requests to a site where they're authenticated. It exploits the fact that browsers automatically send cookies with requests.
@@ -6258,8 +5972,7 @@ Give an example like a malicious form that submits to a bank. Mention specific C
 
 ---
 
-## Question:
-What is clickjacking?
+## Question: What is clickjacking?
 
 ## Answer:
 Clickjacking tricks users into clicking something different from what they see. An attacker overlays a transparent iframe on a button, so clicking the visible button actually clicks the hidden iframe.
@@ -6278,8 +5991,7 @@ Explain the transparent iframe technique. Mention the specific headers that prev
 
 ---
 
-## Question:
-What is CORS?
+## Question: What is CORS?
 
 ## Answer:
 CORS (Cross-Origin Resource Sharing) is a browser security mechanism that restricts how resources can be requested from a different origin. It uses HTTP headers to tell browsers whether to allow cross-origin requests.
@@ -6298,8 +6010,7 @@ Explain why CORS exists (security). Mention that it's enforced by browsers, not 
 
 ---
 
-## Question:
-What is CSP?
+## Question: What is CSP?
 
 ## Answer:
 CSP (Content Security Policy) is a security layer that helps prevent XSS, clickjacking, and other code injection attacks. It tells the browser which resources are allowed to load.
@@ -6318,8 +6029,7 @@ Give examples of CSP directives like `script-src` and `style-src`. Mention that 
 
 ---
 
-## Question:
-How do you optimize JavaScript performance?
+## Question: How do you optimize JavaScript performance?
 
 ## Answer:
 Key optimizations: minimize DOM manipulation, use event delegation, debounce/throttle events, lazy load resources, code split, use requestAnimationFrame, avoid memory leaks, and profile with Chrome DevTools.
@@ -6340,8 +6050,7 @@ Give specific examples from your experience. Mention profiling with Chrome DevTo
 
 ---
 
-## Question:
-How do you reduce bundle size?
+## Question: How do you reduce bundle size?
 
 ## Answer:
 Techniques include: tree shaking, code splitting, dynamic imports, lazy loading, removing unused code, minifying, compressing (gzip/brotli), and using smaller libraries.
@@ -6361,8 +6070,7 @@ Mention specific tools like webpack-bundle-analyzer. Give examples of size reduc
 
 ---
 
-## Question:
-What is lazy loading?
+## Question: What is lazy loading?
 
 ## Answer:
 Lazy loading defers loading of non-critical resources until they're needed. Images load when they enter the viewport, components load when the user navigates to them, and code loads on demand.
@@ -6383,8 +6091,7 @@ Give practical examples. Mention how it improves performance metrics.
 
 ---
 
-## Question:
-What is tree shaking?
+## Question: What is tree shaking?
 
 ## Answer:
 Tree shaking removes unused code from your bundle. It analyzes import/export relationships and excludes code that's never imported. It works with ES modules because they use static imports.
@@ -6403,8 +6110,7 @@ Explain why it requires ES modules (static analysis). Mention `sideEffects` in p
 
 ---
 
-## Question:
-What is code splitting?
+## Question: What is code splitting?
 
 ## Answer:
 Code splitting breaks your bundle into smaller chunks that load on demand. Users only download the code they need for the current page, reducing initial load time.
@@ -6423,8 +6129,7 @@ Give a practical example like splitting by route. Mention that it improves initi
 
 ---
 
-## Question:
-What is preloading?
+## Question: What is preloading?
 
 ## Answer:
 Preloading tells the browser to fetch a resource early because it will be needed soon. Use `<link rel="preload">` for critical resources like fonts, CSS, or scripts needed for the current page.
@@ -6443,8 +6148,7 @@ Give examples of what to preload (fonts, critical CSS). Mention that over-preloa
 
 ---
 
-## Question:
-What is prefetching?
+## Question: What is prefetching?
 
 ## Answer:
 Prefetching fetches resources for future navigation. Use `<link rel="prefetch">` for resources that will be needed on the next page or interaction.
@@ -6463,8 +6167,7 @@ Compare with preload — preload is for current page, prefetch is for future pag
 
 ---
 
-## Question:
-How do you improve Core Web Vitals?
+## Question: How do you improve Core Web Vitals?
 
 ## Answer:
 Core Web Vitals are LCP (loading), INP (interactivity), and CLS (visual stability). Improve them by: optimizing images, reducing server response time, minimizing JavaScript, using proper font loading, and avoiding layout shifts.
@@ -6483,8 +6186,7 @@ Explain each metric briefly. Give specific optimization techniques for each.
 
 ---
 
-## Question:
-How do you profile JavaScript performance?
+## Question: How do you profile JavaScript performance?
 
 ## Answer:
 I use Chrome DevTools Performance tab to record and analyze performance. I look for long tasks, layout thrashing, expensive paint operations, and memory leaks. I also use Lighthouse for overall performance scores.
@@ -6504,8 +6206,7 @@ Walk through your profiling workflow. Mention specific issues you've found and f
 
 ---
 
-## Question:
-What JavaScript concepts should every senior developer master?
+## Question: What JavaScript concepts should every senior developer master?
 
 ## Answer:
 Core concepts: closures, prototypes, the event loop, promises/async-await, modules, scope, `this` binding, and memory management. Plus: performance optimization, security (XSS, CSRF), testing, build tools, and debugging with Chrome DevTools.
